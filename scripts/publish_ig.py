@@ -54,17 +54,29 @@ def read_secret(name: str) -> str:
     return ""
 
 
+def _read(resp) -> dict:
+    return json.loads(resp.read().decode())
+
+
 def api_get(path: str, params: dict) -> dict:
     url = f"{BASE}/{path}?" + urllib.parse.urlencode(params)
-    with urllib.request.urlopen(url, timeout=60, context=_SSL_CTX) as resp:
-        return json.loads(resp.read().decode())
+    try:
+        with urllib.request.urlopen(url, timeout=60, context=_SSL_CTX) as resp:
+            return _read(resp)
+    except urllib.error.HTTPError as e:
+        body = e.read().decode(errors="replace")
+        raise RuntimeError(f"GET {path} → HTTP {e.code}: {body}") from None
 
 
 def api_post(path: str, params: dict) -> dict:
     data = urllib.parse.urlencode(params).encode()
     req = urllib.request.Request(f"{BASE}/{path}", data=data, method="POST")
-    with urllib.request.urlopen(req, timeout=60, context=_SSL_CTX) as resp:
-        return json.loads(resp.read().decode())
+    try:
+        with urllib.request.urlopen(req, timeout=60, context=_SSL_CTX) as resp:
+            return _read(resp)
+    except urllib.error.HTTPError as e:
+        body = e.read().decode(errors="replace")
+        raise RuntimeError(f"POST {path} → HTTP {e.code}: {body}") from None
 
 
 def poll_finished(container_id: str, token: str, label: str, timeout_s: int = 180) -> None:
@@ -102,16 +114,23 @@ def main() -> int:
     ap.add_argument("--dry", action="store_true", help="建容器＋驗圖＋輪詢 FINISHED，但不 media_publish")
     args = ap.parse_args()
 
-    ig_user = read_secret("IG_BUSINESS_ACCOUNT_ID")
     token = read_secret("IG_ACCESS_TOKEN")
-    if not ig_user or not token:
-        print("[ERR] 缺 IG_BUSINESS_ACCOUNT_ID / IG_ACCESS_TOKEN", file=sys.stderr)
+    if not token:
+        print("[ERR] 缺 IG_ACCESS_TOKEN", file=sys.stderr)
+        return 1
+
+    # graph.instagram.com（Instagram Login / IGAA token）內容發佈的節點是 GET /me 的 **user_id** 欄位
+    # （這裡＝17841…，等同 IG_BUSINESS_ACCOUNT_ID），而**不是** `id` 欄位（26563…），也不能用字面 "me"。
+    # 實測：node=user_id → /media（含 is_carousel_item）與 media_publish 都成功；node=id → 400 subcode 33。
+    me = api_get("me", {"fields": "id,user_id,username", "access_token": token})
+    ig_user = me.get("user_id")
+    if not ig_user:
+        print(f"[ERR] 無法解析 IG user_id：{me}", file=sys.stderr)
         return 1
 
     if args.check:
-        me = api_get(ig_user, {"fields": "id,username", "access_token": token})
         print(json.dumps(me, ensure_ascii=False, indent=2))
-        return 0 if me.get("id") else 1
+        return 0
 
     images = args.images
     if len(images) < 2:
@@ -133,7 +152,7 @@ def main() -> int:
     # 1) 逐張建子容器
     child_ids = []
     for i, u in enumerate(images, 1):
-        c = api_post(ig_user, {
+        c = api_post(f"{ig_user}/media", {
             "image_url": u,
             "is_carousel_item": "true",
             "access_token": token,
@@ -151,7 +170,7 @@ def main() -> int:
     print("[ok] 所有子容器 FINISHED")
 
     # 3) 建 carousel 容器
-    carousel = api_post(ig_user, {
+    carousel = api_post(f"{ig_user}/media", {
         "media_type": "CAROUSEL",
         "children": ",".join(child_ids),
         "caption": caption,
@@ -170,7 +189,7 @@ def main() -> int:
         return 0
 
     # 5) 發佈
-    pub = api_post(ig_user, {"creation_id": carousel_id, "access_token": token})
+    pub = api_post(f"{ig_user}/media_publish", {"creation_id": carousel_id, "access_token": token})
     post_id = pub.get("id")
     if not post_id:
         print(f"[ERR] media_publish 失敗：{pub}", file=sys.stderr)
