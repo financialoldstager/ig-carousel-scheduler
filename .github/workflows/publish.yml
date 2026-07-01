@@ -1,0 +1,60 @@
+name: Publish IG + Threads at 8:30PM MYT
+
+# 20:30 MYT = 12:30 UTC（馬來西亞無夏令時間，固定 UTC+8）
+# ⚠️ GitHub Actions cron 有數分鐘漂移（尖峰可能晚 5–15 分鐘），對黃金時段尾端可接受。
+on:
+  schedule:
+    - cron: "30 12 * * *"
+  workflow_dispatch:
+    inputs:
+      dry:
+        description: "乾跑（只建容器不發佈）"
+        type: boolean
+        default: false
+      date:
+        description: "指定日期 YYYY-MM-DD（留空＝今天 MYT）"
+        type: string
+        default: ""
+
+permissions:
+  contents: write   # 讓 workflow 把更新後的 manifest 狀態 commit 回來
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install deps
+        run: pip install certifi
+
+      - name: Run publisher
+        env:
+          IG_ACCESS_TOKEN: ${{ secrets.IG_ACCESS_TOKEN }}
+          IG_BUSINESS_ACCOUNT_ID: ${{ secrets.IG_BUSINESS_ACCOUNT_ID }}
+          THREADS_ACCESS_TOKEN: ${{ secrets.THREADS_ACCESS_TOKEN }}
+          THREADS_USER_ID: ${{ secrets.THREADS_USER_ID }}
+          TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+          TELEGRAM_ALLOWED_CHAT_ID: ${{ secrets.TELEGRAM_ALLOWED_CHAT_ID }}
+        run: |
+          ARGS=""
+          if [ "${{ inputs.dry }}" = "true" ]; then ARGS="$ARGS --dry"; fi
+          if [ -n "${{ inputs.date }}" ]; then ARGS="$ARGS --date ${{ inputs.date }}"; fi
+          python3 scripts/run_publish.py $ARGS
+
+      - name: Commit manifest status (if changed)
+        if: ${{ inputs.dry != true }}
+        run: |
+          git config user.name "ig-carousel-bot"
+          git config user.email "bot@financialoldstager.com"
+          git add queue/*.json || true
+          if ! git diff --cached --quiet; then
+            git commit -m "chore: 更新 manifest 發佈狀態"
+            git push
+          else
+            echo "manifest 無變動，不 commit"
+          fi

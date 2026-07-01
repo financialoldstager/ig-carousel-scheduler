@@ -1,0 +1,8 @@
+# 絕不進 repo：任何憑證／env
+*.env
+.env*
+*token*
+*secret*
+__pycache__/
+*.pyc
+.DS_Store
