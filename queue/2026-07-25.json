@@ -20,9 +20,13 @@
     "images": 6
   },
   "ig": {
-    "status": "pending"
+    "status": "published",
+    "permalink": "https://www.instagram.com/p/DbN_5-DIHIY/",
+    "post_id": "18101873669586118"
   },
   "threads": {
-    "status": "pending"
+    "status": "published",
+    "permalink": "https://www.threads.com/@financialoldstager/post/DbN_7hjoBF8",
+    "post_id": "18092728757379161"
   }
 }
