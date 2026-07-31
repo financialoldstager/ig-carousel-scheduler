@@ -1,10 +1,20 @@
 name: Publish IG + Threads at 8:30PM MYT
 
-# 20:30 MYT = 12:30 UTC（馬來西亞無夏令時間，固定 UTC+8）
-# ⚠️ GitHub Actions cron 有數分鐘漂移（尖峰可能晚 5–15 分鐘），對黃金時段尾端可接受。
+# 目標發佈時刻：20:30 MYT = 12:30 UTC（馬來西亞無夏令時間，固定 UTC+8）
+#
+# ⚠️ 為什麼不直接把 cron 設在 12:30：GitHub Actions 的 schedule 只保證「不早於」，
+#    實測漂移是「兩到三小時」等級（2026-07-02 晚 2h50m、2026-07-30 晚 2h12m），
+#    等於每次都錯過 19:30–20:30 的黃金時段、發在快 11 點。
+#
+# 解法（2026-07-31 改）：cron 提早到 08:00 UTC 觸發，job 先睡到 12:30 UTC 整點才發。
+#    漂移緩衝 4.5 小時，遠大於實測值。repo 是 public → Actions 分鐘數免費無上限，
+#    睡覺不花錢。11:00 UTC 那條是備援，防「GitHub 整個把 run 丟掉」。
+#    兩條 cron 同時存在不會雙發：concurrency 讓備援排隊等主引信跑完，
+#    輪到它時 checkout 拿到的 manifest 已是 published，run_publish.py 自己會跳過。
 on:
   schedule:
-    - cron: "30 12 * * *"
+    - cron: "0 8 * * *"    # 主引信：16:00 MYT 觸發，睡到 20:30 MYT 才發
+    - cron: "0 11 * * *"   # 備援：19:00 MYT 觸發，主引信被丟掉時補位
   workflow_dispatch:
     inputs:
       dry:
@@ -15,13 +25,22 @@ on:
         description: "指定日期 YYYY-MM-DD（留空＝今天 MYT）"
         type: string
         default: ""
+      wait:
+        description: "等到 20:30 MYT 才發（手動觸發預設不等，立刻發）"
+        type: boolean
+        default: false
 
 permissions:
   contents: write   # 讓 workflow 把更新後的 manifest 狀態 commit 回來
 
+concurrency:
+  group: publish-daily
+  cancel-in-progress: false   # 備援排隊等主引信跑完，不要互相取消
+
 jobs:
   publish:
     runs-on: ubuntu-latest
+    timeout-minutes: 330   # 4.5h 等待 + 餘裕；上限 6h
     steps:
       - uses: actions/checkout@v4
 
@@ -32,7 +51,49 @@ jobs:
       - name: Install deps
         run: pip install certifi
 
+      # 睡之前先看今天的 manifest 還需不需要發。備援排隊輪到時多半已是 published，
+      # 這一步讓它直接結束，不要白佔 runner 幾個小時。
+      - name: Check if already published
+        id: check
+        run: |
+          DATE_ARG="${{ inputs.date }}"
+          if [ -z "$DATE_ARG" ]; then DATE_ARG=$(TZ=Asia/Kuala_Lumpur date +%Y-%m-%d); fi
+          echo "date=$DATE_ARG" >> "$GITHUB_OUTPUT"
+          python3 - "$DATE_ARG" <<'PY' >> "$GITHUB_OUTPUT"
+          import json, os, sys
+          d = sys.argv[1]
+          p = f"queue/{d}.json"
+          if not os.path.exists(p):
+              print("todo=none")          # 今天沒排東西
+              raise SystemExit(0)
+          m = json.load(open(p))
+          pending = [k for k in ("ig", "threads")
+                     if (m.get(k) or {}).get("status") != "published"]
+          print("todo=" + (",".join(pending) if pending else "none"))
+          PY
+          cat "$GITHUB_OUTPUT"
+
+      # 精準引信：睡到 12:30 UTC 整點。已經過了就立刻發（遲到總比不發好）。
+      - name: Wait until 20:30 MYT
+        if: ${{ steps.check.outputs.todo != 'none' && (github.event_name == 'schedule' || inputs.wait) }}
+        run: |
+          TARGET=$(date -u -d "$(date -u +%Y-%m-%d)T12:30:00Z" +%s)
+          NOW=$(date -u +%s)
+          DELTA=$(( TARGET - NOW ))
+          if [ "$DELTA" -le 0 ]; then
+            echo "⚠️ 已過 12:30 UTC（遲 $(( -DELTA / 60 )) 分鐘），不等待、立刻發佈"
+            exit 0
+          fi
+          if [ "$DELTA" -gt 18000 ]; then
+            echo "⚠️ 距目標 $(( DELTA / 60 )) 分鐘，超過 5 小時上限，不等待、立刻發佈"
+            exit 0
+          fi
+          echo "距 20:30 MYT 還有 $(( DELTA / 60 )) 分 $(( DELTA % 60 )) 秒，睡到整點再發"
+          sleep "$DELTA"
+          echo "到點，開始發佈：$(TZ=Asia/Kuala_Lumpur date '+%Y-%m-%d %H:%M:%S %Z')"
+
       - name: Run publisher
+        if: ${{ steps.check.outputs.todo != 'none' }}
         env:
           IG_ACCESS_TOKEN: ${{ secrets.IG_ACCESS_TOKEN }}
           IG_BUSINESS_ACCOUNT_ID: ${{ secrets.IG_BUSINESS_ACCOUNT_ID }}
@@ -46,14 +107,19 @@ jobs:
           if [ -n "${{ inputs.date }}" ]; then ARGS="$ARGS --date ${{ inputs.date }}"; fi
           python3 scripts/run_publish.py $ARGS
 
+      - name: Skip notice
+        if: ${{ steps.check.outputs.todo == 'none' }}
+        run: echo "今天沒有待發項目（無 manifest，或 IG/Threads 都已 published），結束。"
+
       - name: Commit manifest status (if changed)
-        if: ${{ inputs.dry != true }}
+        if: ${{ inputs.dry != true && steps.check.outputs.todo != 'none' }}
         run: |
           git config user.name "ig-carousel-bot"
           git config user.email "bot@financialoldstager.com"
           git add queue/*.json || true
           if ! git diff --cached --quiet; then
             git commit -m "chore: 更新 manifest 發佈狀態"
+            git pull --rebase --autostash
             git push
           else
             echo "manifest 無變動，不 commit"
