@@ -1,24 +1,34 @@
 {
- "date": "2026-08-01",
- "scheduled_myt": "2026-08-01T20:30:00+08:00",
- "card_path": "003 Card/9 AI 工作術/9. 最熱門的程式語言已經是英文（或者說是人話）.md",
- "card_title": "最熱門的程式語言已經是英文（或者說是人話）",
- "images": [
-  "https://financialoldstager.github.io/ig-carousel-scheduler/staging/2026-08-01/1.jpg",
-  "https://financialoldstager.github.io/ig-carousel-scheduler/staging/2026-08-01/2.jpg",
-  "https://financialoldstager.github.io/ig-carousel-scheduler/staging/2026-08-01/3.jpg",
-  "https://financialoldstager.github.io/ig-carousel-scheduler/staging/2026-08-01/4.jpg",
-  "https://financialoldstager.github.io/ig-carousel-scheduler/staging/2026-08-01/5.jpg",
-  "https://financialoldstager.github.io/ig-carousel-scheduler/staging/2026-08-01/6.jpg"
- ],
- "ig_caption": "最熱門的程式語言，已經不是 Python，也不是 JavaScript，是人話。\n\n過去要叫電腦做事，得先學會一門程式語言，語法錯一個字就跑不動。現在你把需求用自然語言講清楚，AI 就能轉成程式碼去執行。\n\n這件事真正的意義，不是「終於不用學寫程式了」，而是門檻搬了家。從「會不會寫」，移到「能不能把想要的東西描述清楚」。語法可以交給 AI，但你到底要什麼、邊界在哪、做到什麼程度算完成，AI 猜不出來。\n\n所以會精準表達需求、定義清楚邊界與規格的人，就是新時代的 coder。\n\n老蕭沒有任何程式背景，也不會寫一行 code，但這一年靠著把需求用中文講清楚，做出了一個全自動更新的內容儀錶盤、一整套跑在背景的客製化工作流，還有每天早上自己備好的資料整理。我做的不是寫程式，是把一個模糊的想法，拆成 AI 聽得懂的規格。\n\n這也是為什麼溝通能力，還有把模糊想法講成具體 brief 的能力，在 AI Agent 時代不但不貶值，反而增值。\n\n觀點出自 Andrej Karpathy，我是在 2026 年中的一場 AI Meetup 上聽到的，講者是阿石。\n\n—\n\n你身邊有沒有那種「不會寫程式，但每次交代事情都特別清楚」的人？留言說說他都怎麼講話的。\n\n覺得有用就按存起來，下次要把事情交代給 AI 或同事之前，回來看一眼。\n\n#AI工作術 #人工智慧 #職場能力 #溝通能力 #理財老司機 #個人成長 #AIAgent #工作效率 #自我提升 #數位轉型",
- "threads_text": "【9. 最熱門的程式語言已經是英文（或者說是人話）】\n\n過去要叫電腦做事，得先學會一門程式語言，語法錯一個字就跑不動。現在你把需求用自然語言講清楚，AI 就能轉成程式碼去執行。所以最熱門的「程式語言」，其實已經變成人話。\n\n真正的意義不是「終於不用學寫程式了」，而是門檻搬了家。從「會不會寫」，移到「能不能把想要的東西描述清楚」。語法可以交給 AI，但你到底要什麼、邊界在哪、做到什麼程度算完成，AI 猜不出來。\n\n會精準表達需求、定義清楚邊界與規格的人，就是新時代的 coder。\n\n老蕭沒有任何程式背景，也不會寫一行 code，但這一年靠著把需求用中文講清楚，做出了一個全自動更新的內容儀錶盤和一整套背景工作流。我做的不是寫程式，是把模糊的想法拆成 AI 聽得懂的規格。\n\n這也是為什麼溝通能力，還有把模糊想法講成具體 brief 的能力，在 AI Agent 時代不但不貶值，反而增值。\n\n觀點出自 Andrej Karpathy，我是在 2026 年中的一場 AI Meetup 上聽到的，講者是阿石。",
- "fb": {
-  "scheduled_via": "graph_api_direct",
-  "post_id": "100339151416574_1591873902949782",
-  "status": "scheduled",
-  "images": 6,
-  "verified_subattachments": 6,
-  "scheduled_publish_time": 1785587400
- }
+  "date": "2026-08-01",
+  "scheduled_myt": "2026-08-01T20:30:00+08:00",
+  "card_path": "003 Card/9 AI 工作術/9. 最熱門的程式語言已經是英文（或者說是人話）.md",
+  "card_title": "最熱門的程式語言已經是英文（或者說是人話）",
+  "images": [
+    "https://financialoldstager.github.io/ig-carousel-scheduler/staging/2026-08-01/1.jpg",
+    "https://financialoldstager.github.io/ig-carousel-scheduler/staging/2026-08-01/2.jpg",
+    "https://financialoldstager.github.io/ig-carousel-scheduler/staging/2026-08-01/3.jpg",
+    "https://financialoldstager.github.io/ig-carousel-scheduler/staging/2026-08-01/4.jpg",
+    "https://financialoldstager.github.io/ig-carousel-scheduler/staging/2026-08-01/5.jpg",
+    "https://financialoldstager.github.io/ig-carousel-scheduler/staging/2026-08-01/6.jpg"
+  ],
+  "ig_caption": "最熱門的程式語言，已經不是 Python，也不是 JavaScript，是人話。\n\n過去要叫電腦做事，得先學會一門程式語言，語法錯一個字就跑不動。現在你把需求用自然語言講清楚，AI 就能轉成程式碼去執行。\n\n這件事真正的意義，不是「終於不用學寫程式了」，而是門檻搬了家。從「會不會寫」，移到「能不能把想要的東西描述清楚」。語法可以交給 AI，但你到底要什麼、邊界在哪、做到什麼程度算完成，AI 猜不出來。\n\n所以會精準表達需求、定義清楚邊界與規格的人，就是新時代的 coder。\n\n老蕭沒有任何程式背景，也不會寫一行 code，但這一年靠著把需求用中文講清楚，做出了一個全自動更新的內容儀錶盤、一整套跑在背景的客製化工作流，還有每天早上自己備好的資料整理。我做的不是寫程式，是把一個模糊的想法，拆成 AI 聽得懂的規格。\n\n這也是為什麼溝通能力，還有把模糊想法講成具體 brief 的能力，在 AI Agent 時代不但不貶值，反而增值。\n\n觀點出自 Andrej Karpathy，我是在 2026 年中的一場 AI Meetup 上聽到的，講者是阿石。\n\n—\n\n你身邊有沒有那種「不會寫程式，但每次交代事情都特別清楚」的人？留言說說他都怎麼講話的。\n\n覺得有用就按存起來，下次要把事情交代給 AI 或同事之前，回來看一眼。\n\n#AI工作術 #人工智慧 #職場能力 #溝通能力 #理財老司機 #個人成長 #AIAgent #工作效率 #自我提升 #數位轉型",
+  "threads_text": "【9. 最熱門的程式語言已經是英文（或者說是人話）】\n\n過去要叫電腦做事，得先學會一門程式語言，語法錯一個字就跑不動。現在你把需求用自然語言講清楚，AI 就能轉成程式碼去執行。所以最熱門的「程式語言」，其實已經變成人話。\n\n真正的意義不是「終於不用學寫程式了」，而是門檻搬了家。從「會不會寫」，移到「能不能把想要的東西描述清楚」。語法可以交給 AI，但你到底要什麼、邊界在哪、做到什麼程度算完成，AI 猜不出來。\n\n會精準表達需求、定義清楚邊界與規格的人，就是新時代的 coder。\n\n老蕭沒有任何程式背景，也不會寫一行 code，但這一年靠著把需求用中文講清楚，做出了一個全自動更新的內容儀錶盤和一整套背景工作流。我做的不是寫程式，是把模糊的想法拆成 AI 聽得懂的規格。\n\n這也是為什麼溝通能力，還有把模糊想法講成具體 brief 的能力，在 AI Agent 時代不但不貶值，反而增值。\n\n觀點出自 Andrej Karpathy，我是在 2026 年中的一場 AI Meetup 上聽到的，講者是阿石。",
+  "fb": {
+    "scheduled_via": "graph_api_direct",
+    "post_id": "100339151416574_1591873902949782",
+    "status": "scheduled",
+    "images": 6,
+    "verified_subattachments": 6,
+    "scheduled_publish_time": 1785587400
+  },
+  "ig": {
+    "status": "published",
+    "permalink": "https://www.instagram.com/p/Dbf1-cOlgBW/",
+    "post_id": "18072473315395315"
+  },
+  "threads": {
+    "status": "published",
+    "permalink": "https://www.threads.com/@financialoldstager/post/Dbf2AERlgpj",
+    "post_id": "18120577613506558"
+  }
 }
