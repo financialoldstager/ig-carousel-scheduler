@@ -92,8 +92,51 @@ jobs:
           sleep "$DELTA"
           echo "到點，開始發佈：$(TZ=Asia/Kuala_Lumpur date '+%Y-%m-%d %H:%M:%S %Z')"
 
-      - name: Run publisher
+      # ⚠️ 真正的防重複關卡在這裡，不在睡前那步（2026-08-01 重複發文事故）。
+      # 睡前的判斷用的是各自開跑那一刻的 manifest，兩條 cron 都會看到「還沒發」。
+      # 睡醒後重抓遠端 manifest 重算，並用 git push 當 compare-and-swap 搶鎖：
+      # 因為推之前已 reset --hard origin/main，push 成功＝期間沒人搶先，
+      # push 被拒＝別人先發了，本 run 直接放棄，絕不重複貼文。
+      - name: Re-check and claim lock (after wait)
+        id: claim
         if: ${{ steps.check.outputs.todo != 'none' }}
+        run: |
+          set -euo pipefail
+          git config user.name "ig-carousel-bot"
+          git config user.email "bot@financialoldstager.com"
+          git fetch origin main
+          git reset --hard origin/main
+
+          if [ "${{ inputs.dry }}" = "true" ]; then
+            echo "go=yes" >> "$GITHUB_OUTPUT"
+            echo "dry run：不佔鎖、不推 commit。"
+            exit 0
+          fi
+
+          FORCE=""
+          if [ "${{ github.event_name }}" = "workflow_dispatch" ]; then FORCE="--force"; fi
+          TODO=$(python3 scripts/claim.py --date "${{ steps.check.outputs.date }}" \
+                   --run-id "${{ github.run_id }}" $FORCE)
+          echo "睡醒後重讀 manifest：todo=$TODO"
+
+          if [ "$TODO" = "none" ]; then
+            echo "go=no" >> "$GITHUB_OUTPUT"
+            echo "已發過或鎖在別的 run 手上，本 run 結束。"
+            exit 0
+          fi
+
+          git add queue/*.json
+          git commit -q -m "chore: 佔用發佈鎖 run ${{ github.run_id }}（$TODO）"
+          if git push -q origin HEAD:main; then
+            echo "go=yes" >> "$GITHUB_OUTPUT"
+            echo "✅ 搶到鎖，開始發佈。"
+          else
+            echo "go=no" >> "$GITHUB_OUTPUT"
+            echo "⚠️ 另一個 run 先搶到鎖（push 被拒），本 run 不發佈。"
+          fi
+
+      - name: Run publisher
+        if: ${{ steps.claim.outputs.go == 'yes' }}
         env:
           IG_ACCESS_TOKEN: ${{ secrets.IG_ACCESS_TOKEN }}
           IG_BUSINESS_ACCOUNT_ID: ${{ secrets.IG_BUSINESS_ACCOUNT_ID }}
@@ -108,19 +151,32 @@ jobs:
           python3 scripts/run_publish.py $ARGS
 
       - name: Skip notice
-        if: ${{ steps.check.outputs.todo == 'none' }}
-        run: echo "今天沒有待發項目（無 manifest，或 IG/Threads 都已 published），結束。"
+        if: ${{ steps.check.outputs.todo == 'none' || steps.claim.outputs.go == 'no' }}
+        run: echo "今天沒有待發項目（無 manifest／已 published／鎖被別的 run 拿走），結束。"
 
+      # 收尾記帳。貼文這時已經發出去了，所以這步失敗不該讓整個 workflow 紅掉、
+      # 也不該寄失敗信給老蕭——重試三次，真的推不上去就留警告，狀態下次會補正。
       - name: Commit manifest status (if changed)
-        if: ${{ inputs.dry != true && steps.check.outputs.todo != 'none' }}
+        if: ${{ inputs.dry != true && steps.claim.outputs.go == 'yes' }}
         run: |
           git config user.name "ig-carousel-bot"
           git config user.email "bot@financialoldstager.com"
-          git add queue/*.json || true
-          if ! git diff --cached --quiet; then
-            git commit -m "chore: 更新 manifest 發佈狀態"
-            git pull --rebase --autostash
-            git push
-          else
+          if git diff --quiet -- queue/; then
             echo "manifest 無變動，不 commit"
+            exit 0
           fi
+          for i in 1 2 3; do
+            git add queue/*.json
+            git diff --cached --quiet && break
+            git commit -q -m "chore: 更新 manifest 發佈狀態"
+            if git push -q origin HEAD:main; then
+              echo "✅ manifest 狀態已回寫（第 $i 次嘗試）"
+              exit 0
+            fi
+            echo "第 $i 次 push 失敗，重抓遠端後再試"
+            git fetch origin main
+            # 本 run 是唯一持鎖者，遠端不會有人動同一份 manifest；
+            # 萬一撞上（例如老蕭手動改），以本 run 的發佈結果為準。
+            git rebase --strategy-option=theirs origin/main || git rebase --abort
+          done
+          echo "::warning::manifest 狀態回寫失敗，但貼文已發出，不視為失敗"
