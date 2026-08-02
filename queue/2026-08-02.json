@@ -17,10 +17,11 @@
   "fb": {
     "scheduled_via": "graph_api_direct",
     "post_id": "100339151416574_1592764759527363",
-    "status": "scheduled",
+    "status": "published",
     "images": 7,
     "verified_subattachments": 7,
-    "scheduled_publish_time": 1785673800
+    "scheduled_publish_time": 1785673800,
+    "permalink": "https://www.facebook.com/1510618514408655/posts/1592764759527363"
   },
   "lock": {
     "run_id": "30742705653",
