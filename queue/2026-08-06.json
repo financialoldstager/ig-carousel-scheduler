@@ -1,31 +1,41 @@
 {
- "date": "2026-08-06",
- "scheduled_myt": "2026-08-06T20:30:00+08:00",
- "card_path": "003 Card/6 商業洞見/6. 判斷一間好公司，看老闆離開一個月、完全不接電話，公司能不能照常運作.md",
- "card_title": "判斷一間好公司，看老闆離開一個月、完全不接電話，公司能不能照常運作",
- "images": [
-  "https://financialoldstager.github.io/ig-carousel-scheduler/staging/2026-08-06/1.jpg",
-  "https://financialoldstager.github.io/ig-carousel-scheduler/staging/2026-08-06/2.jpg",
-  "https://financialoldstager.github.io/ig-carousel-scheduler/staging/2026-08-06/3.jpg",
-  "https://financialoldstager.github.io/ig-carousel-scheduler/staging/2026-08-06/4.jpg",
-  "https://financialoldstager.github.io/ig-carousel-scheduler/staging/2026-08-06/5.jpg",
-  "https://financialoldstager.github.io/ig-carousel-scheduler/staging/2026-08-06/6.jpg"
- ],
- "ig_caption": "「老闆出去一個月、完全不接電話，公司還能照常運作。」\n\n這是創投圈判斷一間好公司的準則，老蕭在一場 AI Meetup 上聽到，覺得它問得很準。\n\n準的地方在於，它把老闆本人從公司裡抽掉，只看剩下的東西站不站得住。很多公司每天都很忙，老闆每天都在解決問題，看起來很有戰鬥力。但真正該問的是，這些問題為什麼會一再發生，而且只有他能解？\n\n這條準則要測的其實就是這件事，公司到底是靠系統、流程、制度在跑，還是靠一個人的救火在撐。前者老闆走了照樣運轉，後者老闆一走就開始塌。\n\n真正有意思的是後面那半段延伸。\n\n你怎麼用標準作業流程（SOP）約束一班同事自主把事做好，跟你怎麼約束一班 AI 自主把事做好，是同一件事。差別只在對象換了，設計制度的功夫沒有變。\n\n所以能把公司「設計」到不靠自己也能運轉的人，本質上就已經具備了駕馭 AI 自動化的能力。反過來也成立，一間離開老闆就停擺的公司，換成 AI 一樣指揮不動。\n\n老蕭覺得這條準則最好用的地方，是不必真的消失一個月才能測。現在就可以問自己一句。\n\n出處：2026 年中 AI Meetup，阿石分享（2026-06-01）。\n\n—\n\n如果明天起你完全不接電話，你手上的事情會停在哪一格？留言告訴老蕭那一格是什麼，通常那裡就是最該補制度的地方。\n\n覺得有用就按存起來，也可以轉給那個「什麼都要問他」的朋友或主管。\n\n#理財老司機 #老蕭 #商業洞見 #創業 #中小企業 #企業管理 #SOP #流程管理 #AI自動化 #職場成長 #老闆思維 #財商",
- "threads_text": "【判斷一間好公司，看老闆離開一個月、完全不接電話，公司能不能照常運作】\n\n創投圈有這麼一條準則。它準的地方在於，把老闆本人從公司裡抽掉，只看剩下的東西站不站得住。\n\n因為它測的是：這間公司到底是靠系統、流程、制度在跑，還是靠一個人的救火在撐。老闆在的時候，救火看起來像能力；老闆一走，救火留下的洞就是脆弱。\n\n真正有意思的是延伸。你怎麼用 SOP 約束一班同事自主把事做好，跟你怎麼約束一班 AI 自主把事做好，是同一件事。差別只在對象換了，設計制度的功夫沒有變。\n\n所以能把公司設計到不靠自己也能運轉的人，本質上就具備了駕馭 AI 自動化的能力。反過來也成立，一間離開老闆就停擺的公司，換成 AI 一樣指揮不動。\n\n不必真的消失一個月才測得出來。現在問自己一句就好：如果明天起你不接電話，事情會停在哪一格？\n\n出處：2026 年中 AI Meetup，阿石分享（2026-06-01）。",
- "fb": {
-  "post_id": "100339151416574_1596600222477150",
-  "status": "scheduled",
-  "verified_subattachments": 6,
-  "scheduled_publish_time": 1786019400,
-  "permalink": "https://www.facebook.com/1510618514408655/posts/1596600222477150"
- },
- "lock": {
-  "run_id": "31093941663",
-  "claimed_at": "2026-08-06T20:30:01+08:00",
-  "targets": [
-   "ig",
-   "threads"
-  ]
- }
+  "date": "2026-08-06",
+  "scheduled_myt": "2026-08-06T20:30:00+08:00",
+  "card_path": "003 Card/6 商業洞見/6. 判斷一間好公司，看老闆離開一個月、完全不接電話，公司能不能照常運作.md",
+  "card_title": "判斷一間好公司，看老闆離開一個月、完全不接電話，公司能不能照常運作",
+  "images": [
+    "https://financialoldstager.github.io/ig-carousel-scheduler/staging/2026-08-06/1.jpg",
+    "https://financialoldstager.github.io/ig-carousel-scheduler/staging/2026-08-06/2.jpg",
+    "https://financialoldstager.github.io/ig-carousel-scheduler/staging/2026-08-06/3.jpg",
+    "https://financialoldstager.github.io/ig-carousel-scheduler/staging/2026-08-06/4.jpg",
+    "https://financialoldstager.github.io/ig-carousel-scheduler/staging/2026-08-06/5.jpg",
+    "https://financialoldstager.github.io/ig-carousel-scheduler/staging/2026-08-06/6.jpg"
+  ],
+  "ig_caption": "「老闆出去一個月、完全不接電話，公司還能照常運作。」\n\n這是創投圈判斷一間好公司的準則，老蕭在一場 AI Meetup 上聽到，覺得它問得很準。\n\n準的地方在於，它把老闆本人從公司裡抽掉，只看剩下的東西站不站得住。很多公司每天都很忙，老闆每天都在解決問題，看起來很有戰鬥力。但真正該問的是，這些問題為什麼會一再發生，而且只有他能解？\n\n這條準則要測的其實就是這件事，公司到底是靠系統、流程、制度在跑，還是靠一個人的救火在撐。前者老闆走了照樣運轉，後者老闆一走就開始塌。\n\n真正有意思的是後面那半段延伸。\n\n你怎麼用標準作業流程（SOP）約束一班同事自主把事做好，跟你怎麼約束一班 AI 自主把事做好，是同一件事。差別只在對象換了，設計制度的功夫沒有變。\n\n所以能把公司「設計」到不靠自己也能運轉的人，本質上就已經具備了駕馭 AI 自動化的能力。反過來也成立，一間離開老闆就停擺的公司，換成 AI 一樣指揮不動。\n\n老蕭覺得這條準則最好用的地方，是不必真的消失一個月才能測。現在就可以問自己一句。\n\n出處：2026 年中 AI Meetup，阿石分享（2026-06-01）。\n\n—\n\n如果明天起你完全不接電話，你手上的事情會停在哪一格？留言告訴老蕭那一格是什麼，通常那裡就是最該補制度的地方。\n\n覺得有用就按存起來，也可以轉給那個「什麼都要問他」的朋友或主管。\n\n#理財老司機 #老蕭 #商業洞見 #創業 #中小企業 #企業管理 #SOP #流程管理 #AI自動化 #職場成長 #老闆思維 #財商",
+  "threads_text": "【判斷一間好公司，看老闆離開一個月、完全不接電話，公司能不能照常運作】\n\n創投圈有這麼一條準則。它準的地方在於，把老闆本人從公司裡抽掉，只看剩下的東西站不站得住。\n\n因為它測的是：這間公司到底是靠系統、流程、制度在跑，還是靠一個人的救火在撐。老闆在的時候，救火看起來像能力；老闆一走，救火留下的洞就是脆弱。\n\n真正有意思的是延伸。你怎麼用 SOP 約束一班同事自主把事做好，跟你怎麼約束一班 AI 自主把事做好，是同一件事。差別只在對象換了，設計制度的功夫沒有變。\n\n所以能把公司設計到不靠自己也能運轉的人，本質上就具備了駕馭 AI 自動化的能力。反過來也成立，一間離開老闆就停擺的公司，換成 AI 一樣指揮不動。\n\n不必真的消失一個月才測得出來。現在問自己一句就好：如果明天起你不接電話，事情會停在哪一格？\n\n出處：2026 年中 AI Meetup，阿石分享（2026-06-01）。",
+  "fb": {
+    "post_id": "100339151416574_1596600222477150",
+    "status": "scheduled",
+    "verified_subattachments": 6,
+    "scheduled_publish_time": 1786019400,
+    "permalink": "https://www.facebook.com/1510618514408655/posts/1596600222477150"
+  },
+  "lock": {
+    "run_id": "31093941663",
+    "claimed_at": "2026-08-06T20:30:01+08:00",
+    "targets": [
+      "ig",
+      "threads"
+    ]
+  },
+  "ig": {
+    "status": "published",
+    "permalink": "https://www.instagram.com/p/Dbst87TILyK/",
+    "post_id": "17910645330264133"
+  },
+  "threads": {
+    "status": "published",
+    "permalink": "https://www.threads.com/@financialoldstager/post/Dbst-lCoNoQ",
+    "post_id": "18474677557105723"
+  }
 }
