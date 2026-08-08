@@ -1,31 +1,41 @@
 {
- "date": "2026-08-08",
- "scheduled_myt": "2026-08-08T20:30:00+08:00",
- "card_path": "003 Card/1 個人理財/1. 遺囑條款若只寫指令不留裁量權，執行的人遇到沒寫到的情況就只能眼睜睜卡住.md",
- "card_title": "遺囑條款若只寫指令不留裁量權，執行的人遇到沒寫到的情況就只能眼睜睜卡住",
- "images": [
-  "https://financialoldstager.github.io/ig-carousel-scheduler/staging/2026-08-08/1.jpg",
-  "https://financialoldstager.github.io/ig-carousel-scheduler/staging/2026-08-08/2.jpg",
-  "https://financialoldstager.github.io/ig-carousel-scheduler/staging/2026-08-08/3.jpg",
-  "https://financialoldstager.github.io/ig-carousel-scheduler/staging/2026-08-08/4.jpg",
-  "https://financialoldstager.github.io/ig-carousel-scheduler/staging/2026-08-08/5.jpg",
-  "https://financialoldstager.github.io/ig-carousel-scheduler/staging/2026-08-08/6.jpg"
- ],
- "ig_caption": "老蕭看過不少寫得很認真的遺囑與信託條款，出問題的往往不是寫得不夠多，而是寫得太死。\n\n條款寫「每月給我母親三千塊」，立的人簽完字那一刻是踏實的：金額明確、對象明確、給到什麼時候也明確。直到母親臨時需要一筆醫療費。\n\n受託人（Trustee）這時候動不了。他的權力就是條款給的那句話，多付一分錢都可能被受益人以外的人告。機構受託人尤其會死守字面，因為他們沒有理由為別人的媽媽承擔法律風險。不是他不近人情，是他真的沒有那個權力。\n\n解法不是把所有可能情況都寫進去，那本來就寫不完。解法是在指令之外補一句裁量權（Discretionary Power）：不足以支應生活與醫療所需時，受託人有權從信託本金裡動用必要的金額。想更保守一點，就寫成受託人須與指定的保護人（Protector）商議後決定。\n\n這裡有一個常被搞反的地方。很多人以為要讓受益人自己懂得判斷、懂得爭取，其實正好相反：判斷力該交給執行的那一方，不是交給拿錢的那一方。受益人可能是老人家、小孩，或者根本不懂財務，讓他們去判斷才是設計失敗。\n\n再往外推一層，這件事早就不只是遺囑的問題。任何要交給別人執行的規則都一樣，把可能情況全部舉出是不實際的，真正該做的是明確指定：遇到沒寫到的狀況時，誰有權決定。\n\n—\n\n你家的遺囑或信託條款，有沒有留這一句？留言告訴老蕭你檢查的結果。覺得有用就按存起來，等哪天要動筆立遺囑時翻出來對一遍，也可以轉給正在處理長輩財產安排的朋友。\n\n#遺囑 #信託 #遺產規劃 #財富傳承 #理財老司機 #個人理財 #財務規劃 #家庭財務 #馬來西亞理財 #理財知識",
- "threads_text": "【遺囑條款若只寫指令不留裁量權，執行的人遇到沒寫到的情況就只能眼睜睜卡住】\n\n信託條款寫「每月給我母親三千塊」，看起來已經照顧到了，直到母親臨時需要一筆醫療費。\n\n受託人這時候動不了。他的權力就是條款給的那句話，多付一分錢都可能被受益人以外的人告。機構受託人尤其會死守字面，因為他們沒有理由為別人的媽媽承擔法律風險。\n\n所以指令之外還要留一句裁量權：不足以支應生活與醫療所需時，受託人有權從信託本金裡動用必要的金額；保守一點就寫成須與指定的保護人商議後決定。\n\n判斷力要交給執行的那一方，不是交給拿錢的那一方。再往外推一層，任何要交給別人執行的規則都一樣：把可能情況全部舉出是不實際的，真正該做的是明確指定，遇到沒寫到的狀況時誰有權決定。",
- "fb": {
-  "post_id": "100339151416574_1598358875634618",
-  "status": "scheduled",
-  "verified_subattachments": 6,
-  "scheduled_publish_time": 1786192200,
-  "permalink": "https://www.facebook.com/1510618514408655/posts/1598358875634618"
- },
- "lock": {
-  "run_id": "31248838228",
-  "claimed_at": "2026-08-08T20:30:00+08:00",
-  "targets": [
-   "ig",
-   "threads"
-  ]
- }
+  "date": "2026-08-08",
+  "scheduled_myt": "2026-08-08T20:30:00+08:00",
+  "card_path": "003 Card/1 個人理財/1. 遺囑條款若只寫指令不留裁量權，執行的人遇到沒寫到的情況就只能眼睜睜卡住.md",
+  "card_title": "遺囑條款若只寫指令不留裁量權，執行的人遇到沒寫到的情況就只能眼睜睜卡住",
+  "images": [
+    "https://financialoldstager.github.io/ig-carousel-scheduler/staging/2026-08-08/1.jpg",
+    "https://financialoldstager.github.io/ig-carousel-scheduler/staging/2026-08-08/2.jpg",
+    "https://financialoldstager.github.io/ig-carousel-scheduler/staging/2026-08-08/3.jpg",
+    "https://financialoldstager.github.io/ig-carousel-scheduler/staging/2026-08-08/4.jpg",
+    "https://financialoldstager.github.io/ig-carousel-scheduler/staging/2026-08-08/5.jpg",
+    "https://financialoldstager.github.io/ig-carousel-scheduler/staging/2026-08-08/6.jpg"
+  ],
+  "ig_caption": "老蕭看過不少寫得很認真的遺囑與信託條款，出問題的往往不是寫得不夠多，而是寫得太死。\n\n條款寫「每月給我母親三千塊」，立的人簽完字那一刻是踏實的：金額明確、對象明確、給到什麼時候也明確。直到母親臨時需要一筆醫療費。\n\n受託人（Trustee）這時候動不了。他的權力就是條款給的那句話，多付一分錢都可能被受益人以外的人告。機構受託人尤其會死守字面，因為他們沒有理由為別人的媽媽承擔法律風險。不是他不近人情，是他真的沒有那個權力。\n\n解法不是把所有可能情況都寫進去，那本來就寫不完。解法是在指令之外補一句裁量權（Discretionary Power）：不足以支應生活與醫療所需時，受託人有權從信託本金裡動用必要的金額。想更保守一點，就寫成受託人須與指定的保護人（Protector）商議後決定。\n\n這裡有一個常被搞反的地方。很多人以為要讓受益人自己懂得判斷、懂得爭取，其實正好相反：判斷力該交給執行的那一方，不是交給拿錢的那一方。受益人可能是老人家、小孩，或者根本不懂財務，讓他們去判斷才是設計失敗。\n\n再往外推一層，這件事早就不只是遺囑的問題。任何要交給別人執行的規則都一樣，把可能情況全部舉出是不實際的，真正該做的是明確指定：遇到沒寫到的狀況時，誰有權決定。\n\n—\n\n你家的遺囑或信託條款，有沒有留這一句？留言告訴老蕭你檢查的結果。覺得有用就按存起來，等哪天要動筆立遺囑時翻出來對一遍，也可以轉給正在處理長輩財產安排的朋友。\n\n#遺囑 #信託 #遺產規劃 #財富傳承 #理財老司機 #個人理財 #財務規劃 #家庭財務 #馬來西亞理財 #理財知識",
+  "threads_text": "【遺囑條款若只寫指令不留裁量權，執行的人遇到沒寫到的情況就只能眼睜睜卡住】\n\n信託條款寫「每月給我母親三千塊」，看起來已經照顧到了，直到母親臨時需要一筆醫療費。\n\n受託人這時候動不了。他的權力就是條款給的那句話，多付一分錢都可能被受益人以外的人告。機構受託人尤其會死守字面，因為他們沒有理由為別人的媽媽承擔法律風險。\n\n所以指令之外還要留一句裁量權：不足以支應生活與醫療所需時，受託人有權從信託本金裡動用必要的金額；保守一點就寫成須與指定的保護人商議後決定。\n\n判斷力要交給執行的那一方，不是交給拿錢的那一方。再往外推一層，任何要交給別人執行的規則都一樣：把可能情況全部舉出是不實際的，真正該做的是明確指定，遇到沒寫到的狀況時誰有權決定。",
+  "fb": {
+    "post_id": "100339151416574_1598358875634618",
+    "status": "scheduled",
+    "verified_subattachments": 6,
+    "scheduled_publish_time": 1786192200,
+    "permalink": "https://www.facebook.com/1510618514408655/posts/1598358875634618"
+  },
+  "lock": {
+    "run_id": "31248838228",
+    "claimed_at": "2026-08-08T20:30:00+08:00",
+    "targets": [
+      "ig",
+      "threads"
+    ]
+  },
+  "ig": {
+    "status": "published",
+    "permalink": "https://www.instagram.com/p/Dbx3iK-FcJm/",
+    "post_id": "18473588014129656"
+  },
+  "threads": {
+    "status": "published",
+    "permalink": "https://www.threads.com/@financialoldstager/post/Dbx3jlUlfxM",
+    "post_id": "17859898221680612"
+  }
 }
