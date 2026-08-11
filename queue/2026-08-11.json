@@ -1,23 +1,31 @@
 {
-  "date": "2026-08-11",
-  "scheduled_myt": "2026-08-11T20:30:00+08:00",
-  "card_path": "003 Card/9 AI 工作術/9. 學會用 AI，其實是在學程式思維.md",
-  "card_title": "學會用 AI，其實是在學程式思維",
-  "images": [
-    "https://financialoldstager.github.io/ig-carousel-scheduler/staging/2026-08-11/1.jpg",
-    "https://financialoldstager.github.io/ig-carousel-scheduler/staging/2026-08-11/2.jpg",
-    "https://financialoldstager.github.io/ig-carousel-scheduler/staging/2026-08-11/3.jpg",
-    "https://financialoldstager.github.io/ig-carousel-scheduler/staging/2026-08-11/4.jpg",
-    "https://financialoldstager.github.io/ig-carousel-scheduler/staging/2026-08-11/5.jpg",
-    "https://financialoldstager.github.io/ig-carousel-scheduler/staging/2026-08-11/6.jpg"
-  ],
-  "ig_caption": "很多人問老蕭，不懂寫程式，能不能用好 AI。\n\n老蕭的答案是：語法不是門檻，思維才是。\n\n表面上你在學怎麼用 AI 工具，實際上腦袋被訓練的是程式思維（Programming）。它具體包含四件事：怎麼把一件事拆成清楚的步驟，怎麼把規則模組化，怎麼設權限，怎麼用看板和流程讓自動化不出錯、不重複。\n\n這四件事本來是工程師的思考方式。以前一般人碰不到，因為中間隔著語法那道牆。現在 AI 把語法那道牆拆掉了，你講人話它就照做，但牆後面那套思考方式並沒有跟著消失。\n\n所以門檻沒有不見，它只是搬了家，從「會不會寫」搬到「想不想得清楚」。\n\n這也是為什麼同樣一套 AI 工具，有人用出一整條流程，有人只是換個地方問問題。差別不在工具，在於使用者腦袋裡那件事有沒有先被拆乾淨。\n\n用 AI 用得好的人，本質上是思維被結構化了的人。真正值得練的不是背更多提示詞，而是把一件混亂的事拆開、命名、排出先後順序。\n\n—\n\n你用 AI 的時候，卡住的通常是哪一步：拆不出步驟，還是拆得出但講不清楚？留言告訴老蕭。\n\n覺得有用就存起來，下次要跟身邊那個說「我不懂電腦」的朋友解釋時，直接打開這則給他看。\n\n#理財老司機 #AI工作術 #程式思維 #AI素養 #自動化 #工作效率 #職場成長 #數位工具 #AI工具 #思維升級",
-  "threads_text": "【學會用 AI，其實是在學程式思維】\n\n表面上你在學怎麼用 AI 工具，實際上腦袋被訓練的是程式思維：怎麼把一件事拆成清楚的步驟，怎麼把規則模組化，怎麼設權限，怎麼用看板和流程讓自動化不出錯、不重複。\n\n這些本來是工程師的思考方式，現在變成每個用 AI 的人都要會的底層能力。\n\n所以「我不懂寫程式」不該是門檻。AI 把語法那道牆拆掉了，你講人話它就照做，但牆後面那套思考方式沒有跟著消失。門檻只是搬了家，從「會不會寫」搬到「想不想得清楚」。\n\n用 AI 用得好的人，本質上是思維被結構化了的人。",
-  "fb": {
-    "post_id": "100339151416574_1600904098713429",
-    "status": "scheduled",
-    "verified_subattachments": 6,
-    "scheduled_publish_time": 1786451400,
-    "permalink": "https://www.facebook.com/1510618514408655/posts/1600904098713429"
-  }
+ "date": "2026-08-11",
+ "scheduled_myt": "2026-08-11T20:30:00+08:00",
+ "card_path": "003 Card/9 AI 工作術/9. 學會用 AI，其實是在學程式思維.md",
+ "card_title": "學會用 AI，其實是在學程式思維",
+ "images": [
+  "https://financialoldstager.github.io/ig-carousel-scheduler/staging/2026-08-11/1.jpg",
+  "https://financialoldstager.github.io/ig-carousel-scheduler/staging/2026-08-11/2.jpg",
+  "https://financialoldstager.github.io/ig-carousel-scheduler/staging/2026-08-11/3.jpg",
+  "https://financialoldstager.github.io/ig-carousel-scheduler/staging/2026-08-11/4.jpg",
+  "https://financialoldstager.github.io/ig-carousel-scheduler/staging/2026-08-11/5.jpg",
+  "https://financialoldstager.github.io/ig-carousel-scheduler/staging/2026-08-11/6.jpg"
+ ],
+ "ig_caption": "很多人問老蕭，不懂寫程式，能不能用好 AI。\n\n老蕭的答案是：語法不是門檻，思維才是。\n\n表面上你在學怎麼用 AI 工具，實際上腦袋被訓練的是程式思維（Programming）。它具體包含四件事：怎麼把一件事拆成清楚的步驟，怎麼把規則模組化，怎麼設權限，怎麼用看板和流程讓自動化不出錯、不重複。\n\n這四件事本來是工程師的思考方式。以前一般人碰不到，因為中間隔著語法那道牆。現在 AI 把語法那道牆拆掉了，你講人話它就照做，但牆後面那套思考方式並沒有跟著消失。\n\n所以門檻沒有不見，它只是搬了家，從「會不會寫」搬到「想不想得清楚」。\n\n這也是為什麼同樣一套 AI 工具，有人用出一整條流程，有人只是換個地方問問題。差別不在工具，在於使用者腦袋裡那件事有沒有先被拆乾淨。\n\n用 AI 用得好的人，本質上是思維被結構化了的人。真正值得練的不是背更多提示詞，而是把一件混亂的事拆開、命名、排出先後順序。\n\n—\n\n你用 AI 的時候，卡住的通常是哪一步：拆不出步驟，還是拆得出但講不清楚？留言告訴老蕭。\n\n覺得有用就存起來，下次要跟身邊那個說「我不懂電腦」的朋友解釋時，直接打開這則給他看。\n\n#理財老司機 #AI工作術 #程式思維 #AI素養 #自動化 #工作效率 #職場成長 #數位工具 #AI工具 #思維升級",
+ "threads_text": "【學會用 AI，其實是在學程式思維】\n\n表面上你在學怎麼用 AI 工具，實際上腦袋被訓練的是程式思維：怎麼把一件事拆成清楚的步驟，怎麼把規則模組化，怎麼設權限，怎麼用看板和流程讓自動化不出錯、不重複。\n\n這些本來是工程師的思考方式，現在變成每個用 AI 的人都要會的底層能力。\n\n所以「我不懂寫程式」不該是門檻。AI 把語法那道牆拆掉了，你講人話它就照做，但牆後面那套思考方式沒有跟著消失。門檻只是搬了家，從「會不會寫」搬到「想不想得清楚」。\n\n用 AI 用得好的人，本質上是思維被結構化了的人。",
+ "fb": {
+  "post_id": "100339151416574_1600904098713429",
+  "status": "scheduled",
+  "verified_subattachments": 6,
+  "scheduled_publish_time": 1786451400,
+  "permalink": "https://www.facebook.com/1510618514408655/posts/1600904098713429"
+ },
+ "lock": {
+  "run_id": "31475227663",
+  "claimed_at": "2026-08-11T20:30:01+08:00",
+  "targets": [
+   "ig",
+   "threads"
+  ]
+ }
 }
