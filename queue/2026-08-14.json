@@ -1,31 +1,41 @@
 {
- "date": "2026-08-14",
- "scheduled_myt": "2026-08-14T20:30:00+08:00",
- "card_path": "003 Card/1 個人理財/1. 出租房產，要看租金收益率是否追上貸款利率，不是看它會不會漲.md",
- "card_title": "出租房產，要看租金收益率是否追上貸款利率，不是看它會不會漲",
- "images": [
-  "https://financialoldstager.github.io/ig-carousel-scheduler/staging/2026-08-14/1.jpg",
-  "https://financialoldstager.github.io/ig-carousel-scheduler/staging/2026-08-14/2.jpg",
-  "https://financialoldstager.github.io/ig-carousel-scheduler/staging/2026-08-14/3.jpg",
-  "https://financialoldstager.github.io/ig-carousel-scheduler/staging/2026-08-14/4.jpg",
-  "https://financialoldstager.github.io/ig-carousel-scheduler/staging/2026-08-14/5.jpg",
-  "https://financialoldstager.github.io/ig-carousel-scheduler/staging/2026-08-14/6.jpg"
- ],
- "ig_caption": "一間出租中的公寓，租金淨收益率（Rental Yield）2.6%，房貸利率 4.5%。\n\n帳面上它是資產，實際上它每個月從屋主口袋裡拿錢，只是換了一個好聽的名字。\n\n會走到這一步，多半是因為買下它的時候，心裡想的是「這一區會漲」。於是所有計算都圍著增值轉，現金流被放到最後才算，甚至不算。\n\n但判斷投資性房產的第一道關卡不是增值想像，是現金流（Cash Flow）。租金收益率要穩定地高過貸款利率，4% 是底線，5-6% 才算合格。達不到，這筆持有就是每月付費，等一個不確定的漲幅。\n\n真正難的部份不在算術，在承認之後該做什麼。\n\n多數人會等回本才肯賣，於是繼續倒貼幾年。正確的算法是把它跟替代用途（Alternative Use）比：認賠 10% 賣掉，錢挪去能生現金的地方，兩三年就補回來了。抱著不放，等到的往往是更長的空置與更差的成交價。\n\n同一套判準適用於任何靠借錢持有的資產。它能不能自己養活自己，比它會漲多少更早該被問。\n\n—\n\n你手上那間房，租金收益率算過嗎？把數字留言告訴老蕭，看看它現在是在幫你賺錢，還是在跟你收費。\n\n覺得有用就按存起來，下次看房或談貸款之前拿出來重算一次。身邊有人正在猶豫「要不要等回本再賣」，也把這則轉給他。\n\n#理財老司機 #出租房產 #租金收益率 #房產投資 #現金流 #被動收入 #房貸 #個人理財 #馬來西亞理財 #投資判斷 #沉沒成本",
- "threads_text": "【出租房產，要看租金收益率是否追上貸款利率，不是看它會不會漲】\n\n一間出租中的公寓，租金淨收益率（Rental Yield）2.6%，房貸利率 4.5%。帳面上它是資產，實際上它每個月從屋主口袋裡拿錢，只是換了一個好聽的名字。\n\n判斷投資性房產的第一道關卡不是增值想像，是現金流（Cash Flow）：租金收益率要穩定地高過貸款利率，4% 是底線，5-6% 才算合格。達不到，這筆持有就是每月付費，等一個不確定的漲幅。\n\n真正難的是承認之後該做什麼。多數人會等回本才肯賣，於是繼續倒貼幾年。正確的算法是把它跟替代用途比：認賠 10% 賣掉，錢挪去能生現金的地方，兩三年就補回來了；抱著不放，等到的往往是更長的空置與更差的成交價。\n\n同一套判準適用於任何靠借錢持有的資產。它能不能自己養活自己，比它會漲多少更早該被問。",
- "fb": {
-  "post_id": "100339151416574_1603772745093231",
-  "status": "scheduled",
-  "verified_subattachments": 6,
-  "scheduled_publish_time": 1786710600,
-  "permalink": "https://www.facebook.com/1510618514408655/posts/1603772745093231"
- },
- "lock": {
-  "run_id": "31786630370",
-  "claimed_at": "2026-08-14T20:30:01+08:00",
-  "targets": [
-   "ig",
-   "threads"
-  ]
- }
+  "date": "2026-08-14",
+  "scheduled_myt": "2026-08-14T20:30:00+08:00",
+  "card_path": "003 Card/1 個人理財/1. 出租房產，要看租金收益率是否追上貸款利率，不是看它會不會漲.md",
+  "card_title": "出租房產，要看租金收益率是否追上貸款利率，不是看它會不會漲",
+  "images": [
+    "https://financialoldstager.github.io/ig-carousel-scheduler/staging/2026-08-14/1.jpg",
+    "https://financialoldstager.github.io/ig-carousel-scheduler/staging/2026-08-14/2.jpg",
+    "https://financialoldstager.github.io/ig-carousel-scheduler/staging/2026-08-14/3.jpg",
+    "https://financialoldstager.github.io/ig-carousel-scheduler/staging/2026-08-14/4.jpg",
+    "https://financialoldstager.github.io/ig-carousel-scheduler/staging/2026-08-14/5.jpg",
+    "https://financialoldstager.github.io/ig-carousel-scheduler/staging/2026-08-14/6.jpg"
+  ],
+  "ig_caption": "一間出租中的公寓，租金淨收益率（Rental Yield）2.6%，房貸利率 4.5%。\n\n帳面上它是資產，實際上它每個月從屋主口袋裡拿錢，只是換了一個好聽的名字。\n\n會走到這一步，多半是因為買下它的時候，心裡想的是「這一區會漲」。於是所有計算都圍著增值轉，現金流被放到最後才算，甚至不算。\n\n但判斷投資性房產的第一道關卡不是增值想像，是現金流（Cash Flow）。租金收益率要穩定地高過貸款利率，4% 是底線，5-6% 才算合格。達不到，這筆持有就是每月付費，等一個不確定的漲幅。\n\n真正難的部份不在算術，在承認之後該做什麼。\n\n多數人會等回本才肯賣，於是繼續倒貼幾年。正確的算法是把它跟替代用途（Alternative Use）比：認賠 10% 賣掉，錢挪去能生現金的地方，兩三年就補回來了。抱著不放，等到的往往是更長的空置與更差的成交價。\n\n同一套判準適用於任何靠借錢持有的資產。它能不能自己養活自己，比它會漲多少更早該被問。\n\n—\n\n你手上那間房，租金收益率算過嗎？把數字留言告訴老蕭，看看它現在是在幫你賺錢，還是在跟你收費。\n\n覺得有用就按存起來，下次看房或談貸款之前拿出來重算一次。身邊有人正在猶豫「要不要等回本再賣」，也把這則轉給他。\n\n#理財老司機 #出租房產 #租金收益率 #房產投資 #現金流 #被動收入 #房貸 #個人理財 #馬來西亞理財 #投資判斷 #沉沒成本",
+  "threads_text": "【出租房產，要看租金收益率是否追上貸款利率，不是看它會不會漲】\n\n一間出租中的公寓，租金淨收益率（Rental Yield）2.6%，房貸利率 4.5%。帳面上它是資產，實際上它每個月從屋主口袋裡拿錢，只是換了一個好聽的名字。\n\n判斷投資性房產的第一道關卡不是增值想像，是現金流（Cash Flow）：租金收益率要穩定地高過貸款利率，4% 是底線，5-6% 才算合格。達不到，這筆持有就是每月付費，等一個不確定的漲幅。\n\n真正難的是承認之後該做什麼。多數人會等回本才肯賣，於是繼續倒貼幾年。正確的算法是把它跟替代用途比：認賠 10% 賣掉，錢挪去能生現金的地方，兩三年就補回來了；抱著不放，等到的往往是更長的空置與更差的成交價。\n\n同一套判準適用於任何靠借錢持有的資產。它能不能自己養活自己，比它會漲多少更早該被問。",
+  "fb": {
+    "post_id": "100339151416574_1603772745093231",
+    "status": "scheduled",
+    "verified_subattachments": 6,
+    "scheduled_publish_time": 1786710600,
+    "permalink": "https://www.facebook.com/1510618514408655/posts/1603772745093231"
+  },
+  "lock": {
+    "run_id": "31786630370",
+    "claimed_at": "2026-08-14T20:30:01+08:00",
+    "targets": [
+      "ig",
+      "threads"
+    ]
+  },
+  "ig": {
+    "status": "published",
+    "permalink": "https://www.instagram.com/p/DcBUT8wIFA9/",
+    "post_id": "18108131299861490"
+  },
+  "threads": {
+    "status": "published",
+    "permalink": "https://www.threads.com/@financialoldstager/post/DcBUU5OoGiZ",
+    "post_id": "18075225428373770"
+  }
 }
