@@ -1,31 +1,41 @@
 {
- "date": "2026-08-16",
- "scheduled_myt": "2026-08-16T20:30:00+08:00",
- "card_path": "003 Card/1 個人理財/1. 技術分析本質是投機，因為它賭的是價格不是公司.md",
- "card_title": "技術分析本質是投機，因為它賭的是價格不是公司",
- "images": [
-  "https://financialoldstager.github.io/ig-carousel-scheduler/staging/2026-08-16/1.jpg",
-  "https://financialoldstager.github.io/ig-carousel-scheduler/staging/2026-08-16/2.jpg",
-  "https://financialoldstager.github.io/ig-carousel-scheduler/staging/2026-08-16/3.jpg",
-  "https://financialoldstager.github.io/ig-carousel-scheduler/staging/2026-08-16/4.jpg",
-  "https://financialoldstager.github.io/ig-carousel-scheduler/staging/2026-08-16/5.jpg",
-  "https://financialoldstager.github.io/ig-carousel-scheduler/staging/2026-08-16/6.jpg"
- ],
- "ig_caption": "老蕭常被問一個問題：看線圖抓進出點，到底算不算投資？\n\n答案其實藏在你賭的是什麼。技術分析（Technical Analysis）的整套邏輯，是拿過去的股價去推測未來的股價，上升趨勢就追買，下降趨勢就賣出。從頭到尾，它盯的都是價格的短期波動，跟這家公司今年賺了多少、護城河有沒有變寬，一點關係都沒有。\n\n巴菲特有個類比講得很傳神。你剛花 $500,000 買下一間房，不會因為最近兩週有人出價往下掉，就打電話交代仲介：明天有人出 $300,000 就幫我賣掉。換成房子，沒有人這麼幹。因為大家心裡都清楚它值多少，短期有人亂出價，不影響這間房本身的價值。\n\n可是一換成股票，同一個人就把它當成一張可以隨便丟來丟去的紙。價格一跌就慌著賣，完全不去問這門生意本身出了什麼事。\n\n分岔點就在這裡。判斷依據一旦從「這門生意值多少」換成「最近價格往哪走」，那一刻，他就從投資（Investment）掉進了投機（Speculation）。差別從來不在買了什麼標的，而在憑什麼決定買賣。\n\n老蕭不是說看圖的人一定會賠錢，短線有短線的玩法。但至少要對自己誠實：你現在做的這件事，賭的是公司，還是價格。\n\n—\n\n如果這段話戳中你最近的某個決定，留言告訴老蕭：你上一次賣掉持股，是因為公司變了，還是因為價格跌了？\n\n覺得有用就按存起來，下次手癢想砍倉的時候拿出來再讀一遍。也可以轉給那個天天在群組貼線圖的朋友。\n\n#理財老司機 #投資理財 #價值投資 #技術分析 #投機 #股票投資 #投資觀念 #巴菲特 #理財知識 #馬來西亞理財 #投資心法 #財商",
- "threads_text": "【技術分析本質是投機，因為它賭的是價格不是公司】\n\n技術分析（Technical Analysis）用過去的股價推測未來的股價，上升趨勢追買，下降趨勢賣出。它盯的是價格的短期波動，不是公司本身的表現。\n\n巴菲特的類比很傳神：你剛花 $500,000 買下一間房，不會因為最近兩週有人出價往下掉，就交代仲介明天有人出 $300,000 就賣掉。換成房子，沒人這麼幹，因為大家心裡都知道它值多少。\n\n可是一換成股票，人們就把它當成一張可以隨便丟來丟去的紙，價格一跌就慌著賣。\n\n判斷依據一旦從「這門生意值多少」換成「最近價格往哪走」，那一刻，他就從投資（Investment）掉進了投機（Speculation）。\n\n差別不在買了什麼，而在憑什麼決定買賣。",
- "fb": {
-  "post_id": "100339151416574_1605009428302896",
-  "status": "scheduled",
-  "verified_subattachments": 6,
-  "scheduled_publish_time": 1786883400,
-  "permalink": "https://www.facebook.com/1510618514408655/posts/1605009428302896"
- },
- "lock": {
-  "run_id": "31936485129",
-  "claimed_at": "2026-08-16T20:30:00+08:00",
-  "targets": [
-   "ig",
-   "threads"
-  ]
- }
+  "date": "2026-08-16",
+  "scheduled_myt": "2026-08-16T20:30:00+08:00",
+  "card_path": "003 Card/1 個人理財/1. 技術分析本質是投機，因為它賭的是價格不是公司.md",
+  "card_title": "技術分析本質是投機，因為它賭的是價格不是公司",
+  "images": [
+    "https://financialoldstager.github.io/ig-carousel-scheduler/staging/2026-08-16/1.jpg",
+    "https://financialoldstager.github.io/ig-carousel-scheduler/staging/2026-08-16/2.jpg",
+    "https://financialoldstager.github.io/ig-carousel-scheduler/staging/2026-08-16/3.jpg",
+    "https://financialoldstager.github.io/ig-carousel-scheduler/staging/2026-08-16/4.jpg",
+    "https://financialoldstager.github.io/ig-carousel-scheduler/staging/2026-08-16/5.jpg",
+    "https://financialoldstager.github.io/ig-carousel-scheduler/staging/2026-08-16/6.jpg"
+  ],
+  "ig_caption": "老蕭常被問一個問題：看線圖抓進出點，到底算不算投資？\n\n答案其實藏在你賭的是什麼。技術分析（Technical Analysis）的整套邏輯，是拿過去的股價去推測未來的股價，上升趨勢就追買，下降趨勢就賣出。從頭到尾，它盯的都是價格的短期波動，跟這家公司今年賺了多少、護城河有沒有變寬，一點關係都沒有。\n\n巴菲特有個類比講得很傳神。你剛花 $500,000 買下一間房，不會因為最近兩週有人出價往下掉，就打電話交代仲介：明天有人出 $300,000 就幫我賣掉。換成房子，沒有人這麼幹。因為大家心裡都清楚它值多少，短期有人亂出價，不影響這間房本身的價值。\n\n可是一換成股票，同一個人就把它當成一張可以隨便丟來丟去的紙。價格一跌就慌著賣，完全不去問這門生意本身出了什麼事。\n\n分岔點就在這裡。判斷依據一旦從「這門生意值多少」換成「最近價格往哪走」，那一刻，他就從投資（Investment）掉進了投機（Speculation）。差別從來不在買了什麼標的，而在憑什麼決定買賣。\n\n老蕭不是說看圖的人一定會賠錢，短線有短線的玩法。但至少要對自己誠實：你現在做的這件事，賭的是公司，還是價格。\n\n—\n\n如果這段話戳中你最近的某個決定，留言告訴老蕭：你上一次賣掉持股，是因為公司變了，還是因為價格跌了？\n\n覺得有用就按存起來，下次手癢想砍倉的時候拿出來再讀一遍。也可以轉給那個天天在群組貼線圖的朋友。\n\n#理財老司機 #投資理財 #價值投資 #技術分析 #投機 #股票投資 #投資觀念 #巴菲特 #理財知識 #馬來西亞理財 #投資心法 #財商",
+  "threads_text": "【技術分析本質是投機，因為它賭的是價格不是公司】\n\n技術分析（Technical Analysis）用過去的股價推測未來的股價，上升趨勢追買，下降趨勢賣出。它盯的是價格的短期波動，不是公司本身的表現。\n\n巴菲特的類比很傳神：你剛花 $500,000 買下一間房，不會因為最近兩週有人出價往下掉，就交代仲介明天有人出 $300,000 就賣掉。換成房子，沒人這麼幹，因為大家心裡都知道它值多少。\n\n可是一換成股票，人們就把它當成一張可以隨便丟來丟去的紙，價格一跌就慌著賣。\n\n判斷依據一旦從「這門生意值多少」換成「最近價格往哪走」，那一刻，他就從投資（Investment）掉進了投機（Speculation）。\n\n差別不在買了什麼，而在憑什麼決定買賣。",
+  "fb": {
+    "post_id": "100339151416574_1605009428302896",
+    "status": "scheduled",
+    "verified_subattachments": 6,
+    "scheduled_publish_time": 1786883400,
+    "permalink": "https://www.facebook.com/1510618514408655/posts/1605009428302896"
+  },
+  "lock": {
+    "run_id": "31936485129",
+    "claimed_at": "2026-08-16T20:30:00+08:00",
+    "targets": [
+      "ig",
+      "threads"
+    ]
+  },
+  "ig": {
+    "status": "published",
+    "permalink": "https://www.instagram.com/p/DcGd5u5m22q/",
+    "post_id": "18128502721736850"
+  },
+  "threads": {
+    "status": "published",
+    "permalink": "https://www.threads.com/@financialoldstager/post/DcGd7XTG1dR",
+    "post_id": "18075937700702016"
+  }
 }
