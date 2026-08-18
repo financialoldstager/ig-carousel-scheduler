@@ -19,5 +19,13 @@
   "verified_subattachments": 6,
   "scheduled_publish_time": 1787056200,
   "permalink": "https://www.facebook.com/1510618514408655/posts/1607267404743765"
+ },
+ "lock": {
+  "run_id": "32117068395",
+  "claimed_at": "2026-08-18T20:30:01+08:00",
+  "targets": [
+   "ig",
+   "threads"
+  ]
  }
 }
