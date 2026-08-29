@@ -1,30 +1,40 @@
 {
- "date": "2026-08-29",
- "scheduled_myt": "2026-08-29T20:30:00+08:00",
- "card_path": "003 Card/1 個人理財/1. 退休不必只買配息資產，賣掉一部份持股就是自製股息，效果和領息一樣.md",
- "card_title": "退休不必只買配息資產，賣掉一部份持股就是自製股息，效果和領息一樣",
- "images": [
-  "https://financialoldstager.github.io/ig-carousel-scheduler/staging/2026-08-29/1.jpg",
-  "https://financialoldstager.github.io/ig-carousel-scheduler/staging/2026-08-29/2.jpg",
-  "https://financialoldstager.github.io/ig-carousel-scheduler/staging/2026-08-29/3.jpg",
-  "https://financialoldstager.github.io/ig-carousel-scheduler/staging/2026-08-29/4.jpg",
-  "https://financialoldstager.github.io/ig-carousel-scheduler/staging/2026-08-29/5.jpg"
- ],
- "ig_caption": "退休族常有一條自我設限：我只能買有派息、有利息的東西，賺資本利得（Capital Gains）的標的不適合我。\n\n但老蕭想先釐清一件很基本的事，股息從來不是憑空多出來的錢。\n\n公司派息，是把自己切下一塊給你。派息當天股價同步下降，扣掉的就是派出去的那一塊。所以「領息不動本金」其實是錯覺，本金一樣被切走了。\n\n既然如此，自己賣掉一部份持股換現金，也就是自製股息（Home-made Dividends），跟等公司派息給你，在數學上是同一件事。差別只在誰決定什麼時候切、切多少。自己切還多了控制權，用不到的年份可以不切，需要多一點的年份可以多切一點。\n\n被「一定要有配息」綁住，代價是把選股範圍縮到「高息股」那一小塊，而那往往也是成長最慢的一塊。\n\n巴菲特在波克夏（Berkshire Hathaway）2012 年報裡專門寫過一節談股息，講的就是這件事。波克夏（Berkshire Hathaway）一毛股息都不派，它照樣可以是一份退休收入來源。\n\n配息不是收入的唯一形式，它只是其中一種切法。\n\n—\n\n你是「一定要有配息才安心」那一派，還是覺得自己切更靈活？留言告訴老蕭。如果身邊有長輩正在只挑高息股，把這則轉給他；覺得有用可以先存起來，做退休規劃時再翻出來看。\n\n#退休規劃 #退休金 #股息 #自製股息 #高息股 #資本利得 #個人理財 #投資理財 #被動收入 #財務自由 #理財觀念 #理財老司機",
- "threads_text": "【退休不必只買配息資產，賣掉一部份持股就是自製股息，效果和領息一樣】\n\n退休族常有一條自我設限：我只能買有派息、有利息的東西，賺資本利得（Capital Gains）的標的不適合我。\n\n但股息從來不是憑空多出來的錢。公司派息，是把自己切下一塊給你，派息當天股價同步下降。「領息不動本金」其實是錯覺。\n\n既然如此，自己賣掉一部份持股換現金，也就是自製股息（Home-made Dividends），跟等公司派息在數學上是同一件事。差別只在誰決定什麼時候切、切多少。自己切，還多了控制權。\n\n被「一定要有配息」綁住，代價是把選股範圍縮到「高息股」那一小塊，而那往往也是成長最慢的一塊。波克夏（Berkshire Hathaway）一毛股息都不派，它照樣可以是一份退休收入來源。\n\n配息不是收入的唯一形式，它只是其中一種切法。",
- "fb": {
-  "post_id": "100339151416574_1617440270393145",
-  "status": "scheduled",
-  "verified_subattachments": 5,
-  "scheduled_publish_time": 1788006600,
-  "permalink": "https://www.facebook.com/1510618514408655/posts/1617440270393145"
- },
- "lock": {
-  "run_id": "33255498160",
-  "claimed_at": "2026-08-29T21:37:45+08:00",
-  "targets": [
-   "ig",
-   "threads"
-  ]
- }
+  "date": "2026-08-29",
+  "scheduled_myt": "2026-08-29T20:30:00+08:00",
+  "card_path": "003 Card/1 個人理財/1. 退休不必只買配息資產，賣掉一部份持股就是自製股息，效果和領息一樣.md",
+  "card_title": "退休不必只買配息資產，賣掉一部份持股就是自製股息，效果和領息一樣",
+  "images": [
+    "https://financialoldstager.github.io/ig-carousel-scheduler/staging/2026-08-29/1.jpg",
+    "https://financialoldstager.github.io/ig-carousel-scheduler/staging/2026-08-29/2.jpg",
+    "https://financialoldstager.github.io/ig-carousel-scheduler/staging/2026-08-29/3.jpg",
+    "https://financialoldstager.github.io/ig-carousel-scheduler/staging/2026-08-29/4.jpg",
+    "https://financialoldstager.github.io/ig-carousel-scheduler/staging/2026-08-29/5.jpg"
+  ],
+  "ig_caption": "退休族常有一條自我設限：我只能買有派息、有利息的東西，賺資本利得（Capital Gains）的標的不適合我。\n\n但老蕭想先釐清一件很基本的事，股息從來不是憑空多出來的錢。\n\n公司派息，是把自己切下一塊給你。派息當天股價同步下降，扣掉的就是派出去的那一塊。所以「領息不動本金」其實是錯覺，本金一樣被切走了。\n\n既然如此，自己賣掉一部份持股換現金，也就是自製股息（Home-made Dividends），跟等公司派息給你，在數學上是同一件事。差別只在誰決定什麼時候切、切多少。自己切還多了控制權，用不到的年份可以不切，需要多一點的年份可以多切一點。\n\n被「一定要有配息」綁住，代價是把選股範圍縮到「高息股」那一小塊，而那往往也是成長最慢的一塊。\n\n巴菲特在波克夏（Berkshire Hathaway）2012 年報裡專門寫過一節談股息，講的就是這件事。波克夏（Berkshire Hathaway）一毛股息都不派，它照樣可以是一份退休收入來源。\n\n配息不是收入的唯一形式，它只是其中一種切法。\n\n—\n\n你是「一定要有配息才安心」那一派，還是覺得自己切更靈活？留言告訴老蕭。如果身邊有長輩正在只挑高息股，把這則轉給他；覺得有用可以先存起來，做退休規劃時再翻出來看。\n\n#退休規劃 #退休金 #股息 #自製股息 #高息股 #資本利得 #個人理財 #投資理財 #被動收入 #財務自由 #理財觀念 #理財老司機",
+  "threads_text": "【退休不必只買配息資產，賣掉一部份持股就是自製股息，效果和領息一樣】\n\n退休族常有一條自我設限：我只能買有派息、有利息的東西，賺資本利得（Capital Gains）的標的不適合我。\n\n但股息從來不是憑空多出來的錢。公司派息，是把自己切下一塊給你，派息當天股價同步下降。「領息不動本金」其實是錯覺。\n\n既然如此，自己賣掉一部份持股換現金，也就是自製股息（Home-made Dividends），跟等公司派息在數學上是同一件事。差別只在誰決定什麼時候切、切多少。自己切，還多了控制權。\n\n被「一定要有配息」綁住，代價是把選股範圍縮到「高息股」那一小塊，而那往往也是成長最慢的一塊。波克夏（Berkshire Hathaway）一毛股息都不派，它照樣可以是一份退休收入來源。\n\n配息不是收入的唯一形式，它只是其中一種切法。",
+  "fb": {
+    "post_id": "100339151416574_1617440270393145",
+    "status": "scheduled",
+    "verified_subattachments": 5,
+    "scheduled_publish_time": 1788006600,
+    "permalink": "https://www.facebook.com/1510618514408655/posts/1617440270393145"
+  },
+  "lock": {
+    "run_id": "33255498160",
+    "claimed_at": "2026-08-29T21:37:45+08:00",
+    "targets": [
+      "ig",
+      "threads"
+    ]
+  },
+  "ig": {
+    "status": "published",
+    "permalink": "https://www.instagram.com/p/DcoECNGCEoX/",
+    "post_id": "18160932826471139"
+  },
+  "threads": {
+    "status": "published",
+    "permalink": "https://www.threads.com/@financialoldstager/post/DcoEEeGCMRW",
+    "post_id": "17860104915691993"
+  }
 }
