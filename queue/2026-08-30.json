@@ -1,31 +1,41 @@
 {
- "date": "2026-08-30",
- "scheduled_myt": "2026-08-30T20:30:00+08:00",
- "card_path": "003 Card/1 個人理財/1. 稅務減免額度每年重置，所以它真正改變的往往不是你買不買，而是你什麼時候買.md",
- "card_title": "稅務減免額度每年重置，所以它真正改變的往往不是你買不買，而是你什麼時候買",
- "images": [
-  "https://financialoldstager.github.io/ig-carousel-scheduler/staging/2026-08-30/1.jpg",
-  "https://financialoldstager.github.io/ig-carousel-scheduler/staging/2026-08-30/2.jpg",
-  "https://financialoldstager.github.io/ig-carousel-scheduler/staging/2026-08-30/3.jpg",
-  "https://financialoldstager.github.io/ig-carousel-scheduler/staging/2026-08-30/4.jpg",
-  "https://financialoldstager.github.io/ig-carousel-scheduler/staging/2026-08-30/5.jpg",
-  "https://financialoldstager.github.io/ig-carousel-scheduler/staging/2026-08-30/6.jpg"
- ],
- "ig_caption": "多數人年底想到稅務減免，第一個動作是「趕快去買點什麼來湊」。老蕭覺得順序反了。\n\n減免額度不是一個有就用掉的優惠，它是一種每年會過期、也每年會重置的資源。看懂這一點，它真正改變的往往不是你買不買，而是你什麼時候買。\n\n實際操作長這樣。12 月看上幾本書，但今年的生活減免（Lifestyle Relief）額度早就扣滿，這時候買，那張收據就失去了政府給的折扣；忍到 1 月才下單，同一筆錢就換到新一年的額度。反過來，年底發現額度還有空，本來打算明年才換的電腦可以考慮提前到 12 月買。\n\n保費也一樣。剛買的保單今年只繳了兩個月、額度沒滿，那就直接預繳未來幾個月。反正明年也要繳，提前繳就能填進今年的減免欄目。\n\n所以年底真正該做的動作不是衝著買東西去湊減免，而是先盤點今年每一項還剩多少空間，然後決定把手上已經確定要花的錢，安排在今年年底還是明年。\n\n這裡的分界很清楚：為了減免，多花一筆本來不會花的錢，是被優惠牽著走；把本來就要花的錢挪到對的年度，才是規劃。\n\n（減免項目與上限逐年會調整，實際額度以 LHDN 當年度公布的規則為準。）\n\n—\n\n你今年有哪一項減免額度是還沒用完的？留言說說看。\n\n覺得有用就按存起來，年底盤點的時候拿出來對一遍。\n\n#理財老司機 #稅務規劃 #報稅 #TaxRelief #IncomeTax #LHDN #馬來西亞理財 #理財知識 #財務規劃 #年底理財 #省錢技巧 #理財筆記",
- "threads_text": "【稅務減免額度每年重置，所以它真正改變的往往不是你買不買，而是你什麼時候買】\n\n減免額度不是一個有就用掉的優惠，它每年會過期，也每年會重置。\n\n12 月看上幾本書，但今年的生活減免（Lifestyle Relief）額度早就扣滿，這時候買，收據就失去了政府給的折扣；忍到 1 月才下單，同一筆錢就換到新一年的額度。反過來，年底發現額度還有空，本來打算明年才換的電腦可以考慮提前到 12 月買。保費也一樣，剛買的保單今年只繳兩個月、額度沒滿，那就直接預繳未來幾個月。\n\n所以年底該做的不是衝著買東西去湊減免，而是先盤點每一項還剩多少空間，再決定把已經確定要花的錢安排在今年還是明年。\n\n為了減免多花一筆本來不會花的錢，是被優惠牽著走；把本來就要花的錢挪到對的年度，才是規劃。",
- "fb": {
-  "post_id": "100339151416574_1618546366949202",
-  "status": "scheduled",
-  "verified_subattachments": 6,
-  "scheduled_publish_time": 1788093000,
-  "permalink": "https://www.facebook.com/1510618514408655/posts/1618546366949202"
- },
- "lock": {
-  "run_id": "33314508907",
-  "claimed_at": "2026-08-30T21:33:51+08:00",
-  "targets": [
-   "ig",
-   "threads"
-  ]
- }
+  "date": "2026-08-30",
+  "scheduled_myt": "2026-08-30T20:30:00+08:00",
+  "card_path": "003 Card/1 個人理財/1. 稅務減免額度每年重置，所以它真正改變的往往不是你買不買，而是你什麼時候買.md",
+  "card_title": "稅務減免額度每年重置，所以它真正改變的往往不是你買不買，而是你什麼時候買",
+  "images": [
+    "https://financialoldstager.github.io/ig-carousel-scheduler/staging/2026-08-30/1.jpg",
+    "https://financialoldstager.github.io/ig-carousel-scheduler/staging/2026-08-30/2.jpg",
+    "https://financialoldstager.github.io/ig-carousel-scheduler/staging/2026-08-30/3.jpg",
+    "https://financialoldstager.github.io/ig-carousel-scheduler/staging/2026-08-30/4.jpg",
+    "https://financialoldstager.github.io/ig-carousel-scheduler/staging/2026-08-30/5.jpg",
+    "https://financialoldstager.github.io/ig-carousel-scheduler/staging/2026-08-30/6.jpg"
+  ],
+  "ig_caption": "多數人年底想到稅務減免，第一個動作是「趕快去買點什麼來湊」。老蕭覺得順序反了。\n\n減免額度不是一個有就用掉的優惠，它是一種每年會過期、也每年會重置的資源。看懂這一點，它真正改變的往往不是你買不買，而是你什麼時候買。\n\n實際操作長這樣。12 月看上幾本書，但今年的生活減免（Lifestyle Relief）額度早就扣滿，這時候買，那張收據就失去了政府給的折扣；忍到 1 月才下單，同一筆錢就換到新一年的額度。反過來，年底發現額度還有空，本來打算明年才換的電腦可以考慮提前到 12 月買。\n\n保費也一樣。剛買的保單今年只繳了兩個月、額度沒滿，那就直接預繳未來幾個月。反正明年也要繳，提前繳就能填進今年的減免欄目。\n\n所以年底真正該做的動作不是衝著買東西去湊減免，而是先盤點今年每一項還剩多少空間，然後決定把手上已經確定要花的錢，安排在今年年底還是明年。\n\n這裡的分界很清楚：為了減免，多花一筆本來不會花的錢，是被優惠牽著走；把本來就要花的錢挪到對的年度，才是規劃。\n\n（減免項目與上限逐年會調整，實際額度以 LHDN 當年度公布的規則為準。）\n\n—\n\n你今年有哪一項減免額度是還沒用完的？留言說說看。\n\n覺得有用就按存起來，年底盤點的時候拿出來對一遍。\n\n#理財老司機 #稅務規劃 #報稅 #TaxRelief #IncomeTax #LHDN #馬來西亞理財 #理財知識 #財務規劃 #年底理財 #省錢技巧 #理財筆記",
+  "threads_text": "【稅務減免額度每年重置，所以它真正改變的往往不是你買不買，而是你什麼時候買】\n\n減免額度不是一個有就用掉的優惠，它每年會過期，也每年會重置。\n\n12 月看上幾本書，但今年的生活減免（Lifestyle Relief）額度早就扣滿，這時候買，收據就失去了政府給的折扣；忍到 1 月才下單，同一筆錢就換到新一年的額度。反過來，年底發現額度還有空，本來打算明年才換的電腦可以考慮提前到 12 月買。保費也一樣，剛買的保單今年只繳兩個月、額度沒滿，那就直接預繳未來幾個月。\n\n所以年底該做的不是衝著買東西去湊減免，而是先盤點每一項還剩多少空間，再決定把已經確定要花的錢安排在今年還是明年。\n\n為了減免多花一筆本來不會花的錢，是被優惠牽著走；把本來就要花的錢挪到對的年度，才是規劃。",
+  "fb": {
+    "post_id": "100339151416574_1618546366949202",
+    "status": "scheduled",
+    "verified_subattachments": 6,
+    "scheduled_publish_time": 1788093000,
+    "permalink": "https://www.facebook.com/1510618514408655/posts/1618546366949202"
+  },
+  "lock": {
+    "run_id": "33314508907",
+    "claimed_at": "2026-08-30T21:33:51+08:00",
+    "targets": [
+      "ig",
+      "threads"
+    ]
+  },
+  "ig": {
+    "status": "published",
+    "permalink": "https://www.instagram.com/p/DcqoVazGywN/",
+    "post_id": "18032269355659381"
+  },
+  "threads": {
+    "status": "published",
+    "permalink": "https://www.threads.com/@financialoldstager/post/DcqoW4rm04S",
+    "post_id": "17912079168450040"
+  }
 }
