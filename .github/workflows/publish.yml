@@ -67,28 +67,34 @@ jobs:
               print("todo=none")          # 今天沒排東西
               raise SystemExit(0)
           m = json.load(open(p))
+          # 發佈時刻跟 manifest 的 scheduled_myt 走（預設 20:30；老蕭偶爾指定別的時間）
+          from datetime import datetime
+          if m.get("scheduled_myt"):
+              print("target=%d" % int(datetime.fromisoformat(m["scheduled_myt"]).timestamp()))
           pending = [k for k in ("ig", "threads")
                      if (m.get(k) or {}).get("status") != "published"]
           print("todo=" + (",".join(pending) if pending else "none"))
           PY
           cat "$GITHUB_OUTPUT"
 
-      # 精準引信：睡到 12:30 UTC 整點。已經過了就立刻發（遲到總比不發好）。
+      # 精準引信：睡到 manifest 的 scheduled_myt（缺省 12:30 UTC）。已經過了就立刻發（遲到總比不發好）。
       - name: Wait until 20:30 MYT
         if: ${{ steps.check.outputs.todo != 'none' && (github.event_name == 'schedule' || inputs.wait) }}
         run: |
-          TARGET=$(date -u -d "$(date -u +%Y-%m-%d)T12:30:00Z" +%s)
+          TARGET="${{ steps.check.outputs.target }}"
+          if [ -z "$TARGET" ]; then TARGET=$(date -u -d "$(date -u +%Y-%m-%d)T12:30:00Z" +%s); fi
+          echo "目標發佈時刻：$(TZ=Asia/Kuala_Lumpur date -d @$TARGET '+%Y-%m-%d %H:%M %Z')"
           NOW=$(date -u +%s)
           DELTA=$(( TARGET - NOW ))
           if [ "$DELTA" -le 0 ]; then
-            echo "⚠️ 已過 12:30 UTC（遲 $(( -DELTA / 60 )) 分鐘），不等待、立刻發佈"
+            echo "⚠️ 已過目標時刻（遲 $(( -DELTA / 60 )) 分鐘），不等待、立刻發佈"
             exit 0
           fi
           if [ "$DELTA" -gt 18000 ]; then
             echo "⚠️ 距目標 $(( DELTA / 60 )) 分鐘，超過 5 小時上限，不等待、立刻發佈"
             exit 0
           fi
-          echo "距 20:30 MYT 還有 $(( DELTA / 60 )) 分 $(( DELTA % 60 )) 秒，睡到整點再發"
+          echo "距目標時刻還有 $(( DELTA / 60 )) 分 $(( DELTA % 60 )) 秒，睡到整點再發"
           sleep "$DELTA"
           echo "到點，開始發佈：$(TZ=Asia/Kuala_Lumpur date '+%Y-%m-%d %H:%M:%S %Z')"
 
