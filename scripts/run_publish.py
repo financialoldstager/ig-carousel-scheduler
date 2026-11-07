@@ -92,10 +92,10 @@ def main() -> int:
     if ig.get("status") == "published":
         print("[skip] IG 已發佈過")
     else:
-        images = m.get("images", [])
         cap_file = REPO / "queue" / f".{date}.ig_caption.txt"
         cap_file.write_text(m.get("ig_caption", ""))
-        ig_args = ["--images", *images, "--caption-file", str(cap_file)]
+        media = ["--video", m["video"]] if m.get("video") else ["--images", *m.get("images", [])]
+        ig_args = [*media, "--caption-file", str(cap_file)]
         if args.dry:
             ig_args.append("--dry")
         rc, last = run_script("publish_ig.py", ig_args)
@@ -117,7 +117,7 @@ def main() -> int:
     else:
         th_file = REPO / "queue" / f".{date}.threads.txt"
         th_file.write_text(m.get("threads_text", ""))
-        th_args = ["--file", str(th_file)]
+        th_args = ["--file", str(th_file), *(["--video", m["video"]] if m.get("video") else [])]
         if args.dry:
             th_args.append("--dry")
         rc, last = run_script("publish_threads.py", th_args)
@@ -136,7 +136,8 @@ def main() -> int:
         mpath.write_text(json.dumps(m, ensure_ascii=False, indent=2))
 
     title = m.get("card_title") or m.get("card_path", date)
-    telegram(f"{tag}IG carousel 排程發佈 {date}\n「{title}」\n" + "\n".join(results) +
+    kind = "Reels" if m.get("video") else "IG carousel"
+    telegram(f"{tag}{kind} 排程發佈 {date}\n「{title}」\n" + "\n".join(results) +
              "\n（FB 走平台原生排程，另計）")
     print("\n".join(results))
     # 任一真發失敗回非 0，讓 workflow 標紅

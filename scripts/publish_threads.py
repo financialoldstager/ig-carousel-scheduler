@@ -10,6 +10,7 @@ Token：THREADS_USER_ID、THREADS_ACCESS_TOKEN。文字上限 500 字（超過�
   python3 publish_threads.py --check
   python3 publish_threads.py --file threads.txt
   python3 publish_threads.py --file threads.txt --dry    # 只建容器、不發佈
+  python3 publish_threads.py --file threads.txt --video url   # 影片貼文
 """
 from __future__ import annotations
 
@@ -65,6 +66,7 @@ def main() -> int:
     ap.add_argument("--text")
     ap.add_argument("--file")
     ap.add_argument("--dry", action="store_true")
+    ap.add_argument("--video")
     args = ap.parse_args()
 
     user_id = read_secret("THREADS_USER_ID")
@@ -89,22 +91,33 @@ def main() -> int:
         print(f"[ERR] {len(text)} 字超過 Threads {TEXT_LIMIT} 字上限", file=sys.stderr)
         return 2
 
-    container = api_post(f"{user_id}/threads", {
-        "media_type": "TEXT",
-        "text": text,
-        "access_token": token,
-    })
+    params = {"media_type": "TEXT", "text": text, "access_token": token}
+    if args.video:
+        params.update(media_type="VIDEO", video_url=args.video)
+    container = api_post(f"{user_id}/threads", params)
     creation_id = container.get("id")
     if not creation_id:
         print(f"[ERR] 建容器失敗：{container}", file=sys.stderr)
         return 1
+
+    if args.video:
+        deadline = time.time() + 900
+        while True:
+            st = api_get(creation_id, {"fields": "status,error_message", "access_token": token})
+            if st.get("status") == "FINISHED":
+                break
+            if st.get("status") == "ERROR" or time.time() > deadline:
+                print(f"[ERR] 影片處理失敗或逾時：{st}", file=sys.stderr)
+                return 1
+            time.sleep(10)
+    else:
+        time.sleep(5)
 
     if args.dry:
         print(f"[DRY] 停在發佈前。creation_id={creation_id}")
         print(json.dumps({"dry": True, "creation_id": creation_id}, ensure_ascii=False))
         return 0
 
-    time.sleep(5)
     published = api_post(f"{user_id}/threads_publish", {
         "creation_id": creation_id,
         "access_token": token,

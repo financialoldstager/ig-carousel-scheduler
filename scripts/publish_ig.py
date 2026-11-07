@@ -17,6 +17,7 @@ Token 來源優先序：環境變數（GitHub Actions Secrets）→ 本機 ~/.en
 用法：
   python3 publish_ig.py --check                       # 只驗證 token、印帳號
   python3 publish_ig.py --images url1 url2 ... --caption-file cap.txt          # 真發
+  python3 publish_ig.py --video url --caption-file cap.txt          # Reels（影片會同時出現在主頁格子）
   python3 publish_ig.py --images url1 url2 ... --caption-file cap.txt --dry    # 乾跑：建容器＋驗圖抓得到＋輪詢 FINISHED，但不 media_publish
 """
 from __future__ import annotations
@@ -93,6 +94,30 @@ def poll_finished(container_id: str, token: str, label: str, timeout_s: int = 18
     raise TimeoutError(f"{label} 容器 {timeout_s}s 內未 FINISHED")
 
 
+def check_public(url: str, kind: str) -> None:
+    req = urllib.request.Request(url, method="HEAD")
+    try:
+        with urllib.request.urlopen(req, timeout=30, context=_SSL_CTX) as resp:
+            ct = resp.headers.get("Content-Type", "")
+            if not ct.startswith(f"{kind}/"):
+                raise RuntimeError(f"URL 回的不是 {kind}（Content-Type={ct}）：{url}")
+    except urllib.error.HTTPError as e:
+        raise RuntimeError(f"URL 抓不到（HTTP {e.code}）：{url}")
+
+
+def publish(ig_user: str, creation_id: str, token: str) -> int:
+    pub = api_post(f"{ig_user}/media_publish", {"creation_id": creation_id, "access_token": token})
+    post_id = pub.get("id")
+    if not post_id:
+        print(f"[ERR] media_publish 失敗：{pub}", file=sys.stderr)
+        return 1
+    info = api_get(post_id, {"fields": "permalink", "access_token": token})
+    permalink = info.get("permalink", "(取不到 permalink)")
+    print(f"已發佈 IG：{permalink}")
+    print(json.dumps({"post_id": post_id, "permalink": permalink}, ensure_ascii=False))
+    return 0
+
+
 def check_image_public(url: str) -> None:
     """先確認圖是公開、可抓、是影像 mime —— Meta 抓不到圖是最常見的失敗。"""
     req = urllib.request.Request(url, method="HEAD")
@@ -109,6 +134,7 @@ def main() -> int:
     ap = argparse.ArgumentParser()
     ap.add_argument("--check", action="store_true")
     ap.add_argument("--images", nargs="*", default=[])
+    ap.add_argument("--video")
     ap.add_argument("--caption")
     ap.add_argument("--caption-file")
     ap.add_argument("--dry", action="store_true", help="建容器＋驗圖＋輪詢 FINISHED，但不 media_publish")
@@ -132,6 +158,31 @@ def main() -> int:
         print(json.dumps(me, ensure_ascii=False, indent=2))
         return 0
 
+    caption = args.caption or ""
+    if args.caption_file:
+        caption = Path(args.caption_file).expanduser().read_text().strip()
+
+    if args.video:
+        check_public(args.video, "video")
+        reel = api_post(f"{ig_user}/media", {
+            "media_type": "REELS",
+            "video_url": args.video,
+            "caption": caption,
+            "share_to_feed": "true",
+            "access_token": token,
+        })
+        reel_id = reel.get("id")
+        if not reel_id:
+            print(f"[ERR] Reels 容器建立失敗：{reel}", file=sys.stderr)
+            return 1
+        # 影片要轉檔，比圖片慢得多。
+        poll_finished(reel_id, token, "Reels", timeout_s=900)
+        print(f"[ok] Reels 容器 = {reel_id} FINISHED")
+        if args.dry:
+            print(json.dumps({"dry": True, "reel_id": reel_id}, ensure_ascii=False))
+            return 0
+        return publish(ig_user, reel_id, token)
+
     images = args.images
     if len(images) < 2:
         print(f"[ERR] carousel 至少 2 張圖，收到 {len(images)}", file=sys.stderr)
@@ -139,10 +190,6 @@ def main() -> int:
     if len(images) > 10:
         print(f"[ERR] IG carousel 最多 10 張，收到 {len(images)}", file=sys.stderr)
         return 2
-
-    caption = args.caption or ""
-    if args.caption_file:
-        caption = Path(args.caption_file).expanduser().read_text().strip()
 
     # 0) 先驗每張圖公開可抓
     for u in images:
@@ -188,18 +235,7 @@ def main() -> int:
         print(json.dumps({"dry": True, "carousel_id": carousel_id, "children": child_ids}, ensure_ascii=False))
         return 0
 
-    # 5) 發佈
-    pub = api_post(f"{ig_user}/media_publish", {"creation_id": carousel_id, "access_token": token})
-    post_id = pub.get("id")
-    if not post_id:
-        print(f"[ERR] media_publish 失敗：{pub}", file=sys.stderr)
-        return 1
-
-    info = api_get(post_id, {"fields": "permalink", "access_token": token})
-    permalink = info.get("permalink", "(取不到 permalink)")
-    print(f"已發佈 IG：{permalink}")
-    print(json.dumps({"post_id": post_id, "permalink": permalink}, ensure_ascii=False))
-    return 0
+    return publish(ig_user, carousel_id, token)
 
 
 if __name__ == "__main__":
