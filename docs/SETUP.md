@@ -9,7 +9,7 @@
 3. **manifest 佇列**：`queue/<date>.json` 是每天要發什麼的事實來源。
 
 ## 分工
-- **FB**：`ig-carousel-daily` skill 在「落地」時就用 Graph API 原生排程（`published=false` + `scheduled_publish_time=20:30`）送出；Meta 伺服器端到點自發，**不經此 repo 的 cron**。
+- **FB**：`daily-reel` skill 在「落地」時就用 Graph API 原生排程（`published=false` + `scheduled_publish_time=20:30`）送出；Meta 伺服器端到點自發，**不經此 repo 的 cron**。
 - **IG＋Threads**：無原生排程 → 由此 repo 的 cron 到點代發。
 
 ## manifest schema（`queue/<YYYY-MM-DD>.json`）

@@ -1,6 +1,6 @@
 """發一則純文字貼文到 Threads（官方 API，兩步：建容器 → 發佈）。
 
-移植自 ig-carousel-daily skill 的 post_threads.py，改成 token 走環境變數優先
+移植自 daily-reel skill 的 post_threads.py，改成 token 走環境變數優先
 （GitHub Actions Secrets）、退回本機 ~/.env.claude-tools。Threads 無原生排程，
 由 GitHub Actions cron 到點呼叫此腳本代發。
 
