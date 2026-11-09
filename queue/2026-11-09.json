@@ -15,7 +15,10 @@
   "status": "pending"
  },
  "fb": {
-  "status": "pending"
+  "status": "scheduled",
+  "video_id": "1513366757319013",
+  "scheduled_publish_time": "2026-11-09T20:30:00+08:00",
+  "via": "composio FACEBOOK_CREATE_VIDEO_POST"
  },
  "youtube": {
   "status": "pending",
