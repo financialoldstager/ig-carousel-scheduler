@@ -13,6 +13,7 @@ name: Publish IG + Threads at 8:30PM MYT
 #    輪到它時 checkout 拿到的 manifest 已是 published，run_publish.py 自己會跳過。
 on:
   schedule:
+    - cron: "0 2 * * *"    # 早引信：10:00 MYT（2026-11 實測 cron 漂移 6–10 小時，16:00 那條常常過午夜才觸發）
     - cron: "0 8 * * *"    # 主引信：16:00 MYT 觸發，睡到 20:30 MYT 才發
     - cron: "0 11 * * *"   # 備援：19:00 MYT 觸發，主引信被丟掉時補位
   workflow_dispatch:
@@ -32,6 +33,7 @@ on:
 
 permissions:
   contents: write   # 讓 workflow 把更新後的 manifest 狀態 commit 回來
+  actions: write    # 距目標超過 5 小時時，睡 4 小時後重新觸發自己（接力）
 
 concurrency:
   group: publish-daily
@@ -79,7 +81,10 @@ jobs:
 
       # 精準引信：睡到 manifest 的 scheduled_myt（缺省 12:30 UTC）。已經過了就立刻發（遲到總比不發好）。
       - name: Wait until 20:30 MYT
+        id: wait
         if: ${{ steps.check.outputs.todo != 'none' && (github.event_name == 'schedule' || inputs.wait) }}
+        env:
+          GH_TOKEN: ${{ github.token }}
         run: |
           TARGET="${{ steps.check.outputs.target }}"
           if [ -z "$TARGET" ]; then TARGET=$(date -u -d "$(date -u +%Y-%m-%d)T12:30:00Z" +%s); fi
@@ -91,7 +96,15 @@ jobs:
             exit 0
           fi
           if [ "$DELTA" -gt 18000 ]; then
-            echo "⚠️ 距目標 $(( DELTA / 60 )) 分鐘，超過 5 小時上限，不等待、立刻發佈"
+            # 單一 job 最多睡 5.5 小時。舊做法是「超過就立刻發」（09/11/2026 差點提早發出）。
+            # 改成接力：睡 4 小時後用 workflow_dispatch 觸發下一棒（dispatch 不會漂移），
+            # 帶明確日期，過午夜也不會看錯天；本棒不發佈。
+            echo "距目標 $(( DELTA / 60 )) 分鐘，超過 5 小時：睡 4 小時後接力"
+            sleep 14400
+            gh workflow run publish.yml -R "$GITHUB_REPOSITORY" \
+              -f date="${{ steps.check.outputs.date }}" -f wait=true
+            echo "relay=yes" >> "$GITHUB_OUTPUT"
+            echo "✅ 已觸發下一棒，本棒結束"
             exit 0
           fi
           echo "距目標時刻還有 $(( DELTA / 60 )) 分 $(( DELTA % 60 )) 秒，睡到整點再發"
@@ -105,7 +118,7 @@ jobs:
       # push 被拒＝別人先發了，本 run 直接放棄，絕不重複貼文。
       - name: Re-check and claim lock (after wait)
         id: claim
-        if: ${{ steps.check.outputs.todo != 'none' }}
+        if: ${{ steps.check.outputs.todo != 'none' && steps.wait.outputs.relay != 'yes' }}
         run: |
           set -euo pipefail
           git config user.name "ig-carousel-bot"
