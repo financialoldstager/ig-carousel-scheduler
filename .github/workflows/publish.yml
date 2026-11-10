@@ -163,7 +163,7 @@ jobs:
       # 收尾記帳。貼文這時已經發出去了，所以這步失敗不該讓整個 workflow 紅掉、
       # 也不該寄失敗信給老蕭——重試三次，真的推不上去就留警告，狀態下次會補正。
       - name: Commit manifest status (if changed)
-        if: ${{ inputs.dry != true && steps.claim.outputs.go == 'yes' }}
+        if: ${{ always() && inputs.dry != true && steps.claim.outputs.go == 'yes' }}
         run: |
           git config user.name "ig-carousel-bot"
           git config user.email "bot@financialoldstager.com"

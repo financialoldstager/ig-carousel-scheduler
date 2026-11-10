@@ -94,24 +94,32 @@ def main() -> int:
     params = {"media_type": "TEXT", "text": text, "access_token": token}
     if args.video:
         params.update(media_type="VIDEO", video_url=args.video)
-    container = api_post(f"{user_id}/threads", params)
-    creation_id = container.get("id")
-    if not creation_id:
-        print(f"[ERR] 建容器失敗：{container}", file=sys.stderr)
-        return 1
+    # Threads 影片處理偶爾回 ERROR/UNKNOWN（同一支檔 IG 照收，重建容器就好；10/11/2026 判例）
+    # → 失敗就重建容器，最多 3 次。容器沒 publish 前不會出現在帳號上，重建不會重複發文。
+    attempts = 3 if args.video else 1
+    for attempt in range(1, attempts + 1):
+        container = api_post(f"{user_id}/threads", params)
+        creation_id = container.get("id")
+        if not creation_id:
+            print(f"[ERR] 建容器失敗：{container}", file=sys.stderr)
+            return 1
 
-    if args.video:
+        if not args.video:
+            time.sleep(5)
+            break
         deadline = time.time() + 900
         while True:
             st = api_get(creation_id, {"fields": "status,error_message", "access_token": token})
-            if st.get("status") == "FINISHED":
+            if st.get("status") in ("FINISHED", "ERROR") or time.time() > deadline:
                 break
-            if st.get("status") == "ERROR" or time.time() > deadline:
-                print(f"[ERR] 影片處理失敗或逾時：{st}", file=sys.stderr)
-                return 1
             time.sleep(10)
-    else:
-        time.sleep(5)
+        if st.get("status") == "FINISHED":
+            break
+        print(f"[WARN] 第 {attempt}/{attempts} 次影片處理失敗或逾時：{st}", file=sys.stderr)
+        if attempt == attempts:
+            print("[ERR] 影片處理重試用盡", file=sys.stderr)
+            return 1
+        time.sleep(60 * attempt)
 
     if args.dry:
         print(f"[DRY] 停在發佈前。creation_id={creation_id}")
