@@ -15,10 +15,13 @@
     "status": "pending"
   },
   "fb": {
-    "status": "pending"
+    "status": "scheduled",
+    "video_id": "1493023752740776",
+    "scheduled_publish_time": "2026-11-13T20:30:00+08:00",
+    "via": "composio FACEBOOK_CREATE_VIDEO_POST"
   },
   "youtube": {
-    "status": "pending",
+    "status": "scheduled",
     "title": "沒時間做斜槓？拿一張紙算一次，你其實還有 6 小時",
     "description": "覺得自己沒時間開展斜槓事業？先拿一張紙算一次。\n\n一天 24 小時，扣掉睡覺、通勤、吃飯、梳洗和 7 小時工作，還剩 6 小時。老蕭當初這樣記下來，自己也嚇了一跳。\n\n影片沒講的一點：在不同領域之間切換工作模式，大腦的不同區域會輪流休息，生產力反而提高。所以斜槓的重點在於找到做完像充了電的事，把剩下的 6 小時留給它。如果你現在的工作只有耗損能量的部份，你需要的可能就是一個能幫自己充電的斜槓身份。\n\n怎麼從既有優勢找出自己的斜槓方向，老蕭寫在這篇：\nhttps://finoldstager.short.gy/slashie-yt\n\n有什麼事是你做一整天也不覺得累的？\n\n#斜槓 #心流 #時間管理",
     "tags": [
@@ -30,6 +33,9 @@
       "多重收入",
       "理財老司機",
       "個人成長"
-    ]
+    ],
+    "video_id": "UaGf5L4PSgM",
+    "url": "https://youtube.com/shorts/UaGf5L4PSgM",
+    "published_at": "2026-11-13T12:30:00Z"
   }
 }
