@@ -21,7 +21,7 @@
     "via": "composio FACEBOOK_CREATE_VIDEO_POST"
   },
   "youtube": {
-    "status": "pending",
+    "status": "scheduled",
     "title": "報稅系統不會提醒你的事：這些減免要自己填",
     "description": "你每年報稅，是不是把去年的表格照抄一遍？\n\n報稅系統只會自動帶入薪水和公積金，其他減免都要自己填，系統不會提醒。去年漏掉的項目，今年照抄就再漏一次。\n\n今年能省多少稅，12 月 31 日就定了。老蕭把年底前還來得及做的每一項整理成一張自查表，免費下載：\nhttps://finoldstager.short.gy/tax-relief-yt\n\n#報稅 #稅務減免 #理財老司機",
     "tags": [
@@ -32,6 +32,9 @@
       "節稅",
       "扣稅項目",
       "理財老司機"
-    ]
+    ],
+    "video_id": "xqRpKLrHI_4",
+    "url": "https://youtube.com/shorts/xqRpKLrHI_4",
+    "published_at": "2026-11-15T12:30:00Z"
   }
 }
