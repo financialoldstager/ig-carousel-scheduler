@@ -21,7 +21,7 @@
     "via": "composio FACEBOOK_CREATE_VIDEO_POST"
   },
   "youtube": {
-    "status": "pending",
+    "status": "scheduled",
     "title": "晚 15 年開始存退休金，每個月要多存 4 倍",
     "description": "晚 15 年開始存退休金，每個月要多存幾倍？\n\n目標同樣是 RM2,600,000，假設長期年回報 8%。25 歲開始，每個月投資 RM1,745；拖到 40 歲才開始，每個月要 RM7,513。時間少一半，每個月的金額卻是 4 倍以上。\n\n影片沒講的一點：RM2,600,000 是怎麼算出來的。現在每個月花 RM2,000，一年就是 RM24,000。假設通貨膨脹（Inflation）每年 5%，30 年後要過同樣的生活，一年要 RM104,000。再用 4% 法則（4% Rule）乘以 25，就是 RM2,600,000。你可以把自己的每月開銷代進去，算出自己的數字。\n\n算出來的數字很大也沒關係。老蕭把這個做法叫「積木理財法」：把大目標拆成每個月放得下的一小塊，先放第一塊。\n\n完整的四個計算步驟，還有免費線上計算機的用法，老蕭寫在這篇：\nhttps://finoldstager.short.gy/compound-yt\n\n你是幾歲開始投資的？\n\n#複利 #退休規劃 #馬來西亞理財",
     "tags": [
@@ -33,6 +33,9 @@
       "4% 法則",
       "理財老司機",
       "個人理財"
-    ]
+    ],
+    "video_id": "KrYbwpqHUwc",
+    "url": "https://youtube.com/shorts/KrYbwpqHUwc",
+    "published_at": "2026-11-18T12:30:00Z"
   }
 }
